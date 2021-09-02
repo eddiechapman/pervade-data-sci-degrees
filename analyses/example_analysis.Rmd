@@ -1,0 +1,11 @@
+---
+title: "Example Analysis"
+output: html_notebook
+---
+
+This is an example analysis notebook
+
+```{r}
+df <- readr::read_csv('data/degree_programs.csv')
+head(df)
+```
