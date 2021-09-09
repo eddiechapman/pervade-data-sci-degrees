@@ -1,6 +1,6 @@
 library(dplyr)
 
-df <- readr::read_csv('data-raw/Data science programs - US Only.csv')
+df <- readr::read_csv('data-raw/degree_program_metadata.csv')
 
 # Rename columns and drop unwanted columns
 df <- select(df,
