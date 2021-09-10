@@ -1,9 +1,9 @@
 library(dplyr)
 
-degree_metadata_path <- file.path('data-raw', 'degree_program_metadata.csv')
+degree_path <- file.path('data-raw', 'degree_program_metadata.csv')
 
 degrees_df <- 
-  readr::read_csv(degree_metadata_path) %>%
+  readr::read_csv(degree_path) %>%
   select(
     degree_id = ID, 
     degree_level = 'DEGREE LEVEL',
@@ -43,6 +43,8 @@ codes_df <-
 
 quotes_df <- select(quotes_df, quote_id, degree_id, quote, comment)
 
+
+# Output
 
 degrees_out_path <- file.path('data', 'degrees.csv')
 quotes_out_path <- file.path('data', 'quotes.csv')

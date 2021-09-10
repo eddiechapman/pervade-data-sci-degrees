@@ -6,7 +6,7 @@ title: "Example Analysis"
 
 ```{r}
 codes_path <- file.path('..', 'data', 'codes.csv')
-degrees_path <- file.path('..', 'data', 'degress.csv')
+degrees_path <- file.path('..', 'data', 'degrees.csv')
 quotes_path <- file.path('..', 'data', 'quotes.csv')
 
 codes_df <- readr::read_csv(file = codes_path)
