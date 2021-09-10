@@ -1,11 +1,21 @@
 ---
 title: "Example Analysis"
-output: html_notebook
 ---
 
-This is an example analysis notebook
+## Load data 
 
 ```{r}
-df <- readr::read_csv('data/degree_programs.csv')
-head(df)
+codes_path <- file.path('..', 'data', 'codes.csv')
+degrees_path <- file.path('..', 'data', 'degress.csv')
+quotes_path <- file.path('..', 'data', 'quotes.csv')
+
+codes_df <- readr::read_csv(file = codes_path)
+degrees_df <- readr::read_csv(file = degrees_path)
+quotes_df <- readr::read_csv(file = quotes_path)
+```
+
+```{r}
+codes_df
+degrees_df
+quotes_df
 ```
