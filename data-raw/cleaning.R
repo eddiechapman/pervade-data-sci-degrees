@@ -30,7 +30,8 @@ coding_data_path <- file.path('data-raw', 'atlas_coding_data.csv')
 quotes_df <- 
   readr::read_csv(coding_data_path) %>%
   mutate(degree_id = as.numeric(substr(document, 1, 4)),
-         quote_id = group_indices(., quotation)) %>%
+         quote_id = group_indices(., quotation),
+         quotation = stringr::str_trim(quotation)) %>%
   select(quote_id, degree_id, quote = quotation, codes, comment)
 
 
