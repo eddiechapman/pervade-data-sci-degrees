@@ -1,21 +1,131 @@
 ---
 title: "Example Analysis"
+output: html_document
 ---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE, 
+  cache = FALSE
+)
+```
 
 ## Load data 
 
 ```{r}
-codes_path <- file.path('..', 'data', 'codes.csv')
-degrees_path <- file.path('..', 'data', 'degrees.csv')
-quotes_path <- file.path('..', 'data', 'quotes.csv')
+library(dplyr)
+library(ggplot2)
 
-codes_df <- readr::read_csv(file = codes_path)
-degrees_df <- readr::read_csv(file = degrees_path)
-quotes_df <- readr::read_csv(file = quotes_path)
+theme_set(theme_classic())
+
+
+codes_df <- readr::read_csv(
+  file.path('..', 'data', 'codes.csv'), 
+  show_col_types = FALSE
+)
+
+degrees_df <- readr::read_csv(
+  file.path('..', 'data', 'degrees.csv'), 
+  show_col_types = FALSE
+)
+
+quotes_df <- readr::read_csv(
+  file.path('..', 'data', 'quotes.csv'), 
+  show_col_types = FALSE
+)
 ```
+
+## Data exploration
+
+There are two similar fields in our dataset: `degree_category` and `degree_type`. What is the difference bewteen them? I believe we collapsed `degree_type` into `degree_category`.
+
+### Degree category
 
 ```{r}
-codes_df
-degrees_df
-quotes_df
+degrees_df %>%
+  count(degree_category) %>%
+  mutate(degree_category = forcats::fct_reorder(degree_category, n, .desc = TRUE)) %>%
+  ggplot(aes(x = degree_category, y = n)) +
+  geom_bar(stat = 'identity', width = 0.5, fill = 'tomato2') +
+  labs(title = 'Degree categories in Data Science Program data set') +
+  xlab(label = 'Degree category') +
+  ylab(label = '') +
+  theme(axis.text.x = element_text(angle = 65, vjust = 0.6))
+  
 ```
+
+
+### Degree type
+
+```{r}
+degrees_df %>%
+  count(degree_type) %>%
+  mutate(degree_type = forcats::fct_reorder(degree_type, n, .desc = TRUE)) %>%
+  ggplot(aes(x = degree_type, y = n)) +
+  geom_bar(stat = 'identity', width = 0.5, fill = 'tomato2') +
+  labs(title = 'Degree types in Data Science Program data set') +
+  xlab(label = 'Degree type') +
+  ylab(label = '') +
+  theme(axis.text.x = element_text(angle = 65, vjust = 0.6))
+  
+```
+
+I think that the `degree_category` is probably more useful than `degree_type`. Too many similar categories in `degree_type` (data mining, predictive analytics, data science, data analytics...)
+
+### Degree levels 
+
+Bachelors, Masters, etc. for each degree category:
+
+```{r}
+degrees_df %>%
+  add_count(degree_category) %>%
+  mutate(degree_category = forcats::fct_reorder(degree_category, n, .desc = TRUE)) %>%
+  select(degree_category, degree_level) %>%
+  ggplot(aes(degree_category)) +
+  geom_bar(aes(fill = degree_level), width = 0.45) +
+  theme(axis.text.x = element_text(angle = 65, vjust = 0.6)) +
+  labs(title = 'Degree levels per degree category') +
+  xlab(label = 'Degree category') +
+  ylab(label = '') +
+  scale_fill_discrete(name = '')
+```
+
+A lot of masters degrees. Not many bachelors. I'm guessing there are not (or were not at time of collection) many data science undergrad offerings. And the business schools don't mention data science until advanced degree? 
+
+### Code probabilities per degree type
+
+Comparing odds of a code appearing in a Data degree vs. business degree
+
+Inspired by https://www.tidytextmining.com/twitter.html#comparing-word-usage
+
+```{r}
+code_ratios <-
+  degrees_df %>%
+  left_join(codes_df) %>%
+  filter(degree_category %in% c('Business', 'Data')) %>%
+  filter(!code %in% c('[!!]', '[??]')) %>%
+  filter(!is.na(code)) %>%
+  select(degree_category, code) %>%
+  count(degree_category, code) %>%
+  tidyr::pivot_wider(names_from = degree_category, values_from = n, values_fill = 0) %>%
+  mutate_if(is.numeric, list(~(. + 1) / (sum(.) + 1))) %>%
+  mutate(logratio = log(Business / Data)) %>%
+  arrange(desc(logratio))
+
+code_ratios %>%
+  mutate(code = reorder(code, logratio)) %>%
+  ggplot(aes(code, logratio, fill = logratio < 0)) +
+  geom_col(show.legend = TRUE, width = 0.5) +
+  coord_flip() +
+  labs(subtitle="For codes in business and data", 
+       title= "Log odds ratio") + 
+  ylab('log odds ratio') +
+  scale_fill_discrete(name = "", labels = c('Business', 'Data'))
+
+```
+
+Interesting that `definition` appears much more frequently in data degrees than in business. Mention of `tools` in business degrees shows their in
+
