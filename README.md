@@ -34,15 +34,32 @@ This is where we put our scripts and notebooks for analyzing the cleaned data fr
 
 
 
-## Sources on reproducibility in R:
+### Further reading:
+
+#### Renv
 
 [Introduction to renv](https://rstudio.github.io/renv/)
 
 [Snapshot Project Dependencies and Restore Them](https://environments.rstudio.com/snapshot.html)
 
+#### Project management
+
 [Reproducible Research Data and Project Management in R](https://annakrystalli.me/rrresearchACCE20/)
 
 [Example of R data analysis folder layout](https://github.com/Pakillo/template)
+
+[Efficient R Programming (good workflow tips)](https://csgillespie.github.io/efficientR/)
+
+[Reproducible Research in R](https://r-cubed.rostools.org/index.html)
+
+#### Git
+
+[Version Control (from Reproducible Research Data and Project Management in R)](https://r-cubed.rostools.org/version-control.html)
+
+[If things go wrong](https://ohshitgit.com/)
+
+
+
 
 
 
