@@ -40,14 +40,16 @@ quotes_df <- readr::read_csv(
 
 ## Data exploration
 
-There are two similar fields in our dataset: `degree_category` and `degree_type`. What is the difference bewteen them? I believe we collapsed `degree_type` into `degree_category`.
+There are two similar fields in our dataset: `degree_category` and `degree_type`. 
+
+What is the difference bewteen them? I believe we collapsed `degree_type` into `degree_category`.
 
 ### Degree category
 
 ```{r}
 degrees_df %>%
   count(degree_category) %>%
-  mutate(degree_category = forcats::fct_reorder(degree_category, n, .desc = TRUE)) %>%
+  mutate(degree_category = forcats::fct_reorder(degree_category, n, .desc = T)) %>%
   ggplot(aes(x = degree_category, y = n)) +
   geom_bar(stat = 'identity', width = 0.5, fill = 'tomato2') +
   labs(title = 'Degree categories in Data Science Program data set') +
@@ -63,7 +65,7 @@ degrees_df %>%
 ```{r}
 degrees_df %>%
   count(degree_type) %>%
-  mutate(degree_type = forcats::fct_reorder(degree_type, n, .desc = TRUE)) %>%
+  mutate(degree_type = forcats::fct_reorder(degree_type, n, .desc = T)) %>%
   ggplot(aes(x = degree_type, y = n)) +
   geom_bar(stat = 'identity', width = 0.5, fill = 'tomato2') +
   labs(title = 'Degree types in Data Science Program data set') +
@@ -73,7 +75,10 @@ degrees_df %>%
   
 ```
 
-I think that the `degree_category` is probably more useful than `degree_type`. Too many similar categories in `degree_type` (data mining, predictive analytics, data science, data analytics...)
+I think that the `degree_category` is probably more useful than `degree_type`. 
+
+Too many similar categories in `degree_type` (data mining, predictive analytics, 
+data science, data analytics...)
 
 ### Degree levels 
 
@@ -82,7 +87,7 @@ Bachelors, Masters, etc. for each degree category:
 ```{r}
 degrees_df %>%
   add_count(degree_category) %>%
-  mutate(degree_category = forcats::fct_reorder(degree_category, n, .desc = TRUE)) %>%
+  mutate(degree_category = forcats::fct_reorder(degree_category, n, .desc = T)) %>%
   select(degree_category, degree_level) %>%
   ggplot(aes(degree_category)) +
   geom_bar(aes(fill = degree_level), width = 0.45) +
@@ -93,7 +98,9 @@ degrees_df %>%
   scale_fill_discrete(name = '')
 ```
 
-A lot of masters degrees. Not many bachelors. I'm guessing there are not (or were not at time of collection) many data science undergrad offerings. And the business schools don't mention data science until advanced degree? 
+A lot of masters degrees. Not many bachelors. I'm guessing there are not (or 
+were not at time of collection) many data science undergrad offerings. And the 
+business schools don't mention data science until advanced degree? 
 
 ### Code probabilities per degree type
 
@@ -127,5 +134,33 @@ code_ratios %>%
 
 ```
 
-Interesting that `definition` appears much more frequently in data degrees than in business. Mention of `tools` in business degrees shows their in
+Interesting that `definition` appears much more frequently in data degrees than 
+in business. 
 
+
+```{r}
+code_ratios <-
+  degrees_df %>%
+  left_join(codes_df) %>%
+  filter(degree_category == 'data') %>%
+  filter(degree_level %in% c('masters', 'certificate')) %>%
+  filter(!code %in% c('[!!]', '[??]')) %>%
+  filter(!is.na(code)) %>%
+  select(degree_level, code) %>%
+  count(degree_level, code) %>%
+  tidyr::pivot_wider(names_from = degree_level, values_from = n, values_fill = 0) %>%
+  mutate_if(is.numeric, list(~(. + 1) / (sum(.) + 1))) %>%
+  mutate(logratio = log(masters / certificate)) %>%
+  arrange(desc(logratio))
+
+code_ratios %>%
+  mutate(code = reorder(code, logratio)) %>%
+  ggplot(aes(code, logratio, fill = logratio < 0)) +
+  geom_col(show.legend = TRUE, width = 0.5) +
+  coord_flip() +
+  labs(subtitle="For codes in masters and certificate data programs", 
+       title= "Log odds ratio") + 
+  ylab('log odds ratio') +
+  scale_fill_discrete(name = "", labels = c('Masters', 'Certificate'))
+
+```

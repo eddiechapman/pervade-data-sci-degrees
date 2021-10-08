@@ -51,31 +51,17 @@ courses_df <-
   filter(code == 'Courses') %>%
   mutate(course = str_split(quote, '\n')) %>%
   tidyr::unnest_longer(course) %>%
-  mutate(length = str_length(course)) %>%
-  filter(length < 80) %>%
-  mutate(course = str_remove(course, regex('winter|spring|fall|summer', ignore_case = TRUE))) %>%
-  filter(length > 10) %>%
-  filter(str_detect(course, regex('\\d{3,}'))) %>%
-  filter(str_detect(course, regex('[:alpha:]{5,}'))) %>%
-  mutate(course = str_remove(course, regex('^[:alpha:]{2,5}[:blank:]?[:digit:]{3,4}[:blank:]?[:punct:]?[:blank:]?', ignore_case = TRUE)),
-         course = str_remove(course, regex('[\\(\\[].*[\\)\\]]'))) %>%
-  filter(!str_detect(course, regex('[:space:]or[:space:]', ignore_case = TRUE))) %>%
-  mutate(course = str_remove(course, regex('^[:alpha:]{2,5}[:blank:]?[:digit:]{3,4}[:blank:]?[:punct:]?[:blank:]?', ignore_case = TRUE)),
-         course = str_remove(course, regex(' semester | credit | credits | cr | hrs | hours ', ignore_case = TRUE)),
-         course = str_remove(course, regex('^\\w*\\d[\\w\\d[:punct:]]+[[:space:]]?[[:punct:]]?[[:space:]]?')),
-         course = str_remove(course, regex('^[[:space:]]?[[:punct:]]+[[:space:]]?')),
-         course = str_remove(course, regex('^.*\\d+[[:punct:]]?[[:space:]]\\b')),
-         length = str_length(course)) %>%
-  filter(length > 8) %>%
-  select(degree_id, quote_id, length, course) %>%
-  arrange(length)
+  select(degree_id, quote_id, course)
+  
+  
+
 
 # Output
 
 degrees_out_path <- file.path('data', 'degrees.csv')
 quotes_out_path <- file.path('data', 'quotes.csv')
 codes_out_path <- file.path('data', 'codes.csv')
-courses_out_path <- file.path('data', 'courses.csv')
+courses_out_path <- file.path('data-raw', 'courses.csv')
 
 readr::write_csv(degrees_df, file = degrees_out_path)
 readr::write_csv(quotes_df, file = quotes_out_path)
