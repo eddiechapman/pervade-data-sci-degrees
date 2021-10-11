@@ -16,12 +16,13 @@ knitr::opts_chunk$set(
 ```{r}
 library(dplyr)
 library(ggplot2)
+library(stringr)
 
 theme_set(theme_classic())
 
 
 courses_df <- readr::read_csv(
-  file.path('data-raw', 'courses.csv'), 
+  file.path('courses.csv'), 
   show_col_types = FALSE
 )
 ```
@@ -308,11 +309,28 @@ slice_sample(courses_df, n = 100) %>% select(course)
 
 Pretty clean! One of the last things to do is get rid of numbers.
 
-I'm going to come back to that one. 
+```{r}
+pattern <- regex('\\w*\\d\\w*')
+
+courses_df %>%
+  mutate(extracted = str_extract(course, pattern)) %>%
+  filter(!is.na(extracted)) %>%
+  select(extracted, course)
+```
+
+```{r}
+courses_df <-
+  courses_df %>%
+  mutate(course = str_remove(course, pattern))
+```
+
+```{r}
+slice_sample(courses_df, n = 100) %>% select(course)
+```
 
 Saving for now:
 
 ```{r}
-readr::write_csv(courses_df, file = file.path('data', 'courses.csv'))
+readr::write_csv(courses_df, file = file.path('..', 'data', 'courses.csv'))
 ```
 
