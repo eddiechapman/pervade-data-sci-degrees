@@ -1,0 +1,481 @@
+---
+title: "Course Cleaning"
+output: html_notebook
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE, 
+  cache = FALSE
+)
+```
+
+Read in data.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(stringr)
+
+theme_set(theme_classic())
+
+
+courses_df <- readr::read_csv(
+  file.path('intermediate', 'courses.csv'), 
+  show_col_types = FALSE
+)
+```
+
+
+There are 788 unique degrees we found and put in the Google spreadsheet. Of the 
+788, we coded course information for 672 of them. Most of the course codes 
+include multiple courses on multiple lines. Our starting point is to separate 
+each line as a potential course for a degree.
+
+```{r}
+nrow(courses_df) 
+```
+
+There are 36,727 potential degrees. A lot of these are blank lines or 
+miscellaneous formatting. We will attempt to clean and remove as many
+as we can. 
+
+```{r}
+courses_df <-
+  courses_df %>%
+  filter(!is.na(course))
+
+nrow(courses_df)
+```
+
+19,454 "courses" were just blank lines. Now we have 17,273 courses. 
+
+Some of the courses include course descriptions. Some of the courses are only
+descriptions, because the course name was on a previous line. We probably want
+to get rid of the longest course texts. 
+
+Here are courses longer than 80 characters:
+
+```{r}
+courses_df %>%
+  filter(str_length(course) > 80) %>%
+  select(course)
+```
+
+I think it is valid to drop anything longer than 80 characters. 
+
+```{r}
+courses_df <-
+  courses_df %>%
+  filter(str_length(course) < 80)
+
+nrow(courses_df)
+```
+
+1,679 courses were course descriptions. Removing them leaves us with 15,594 courses to clean.
+
+Let's take a random sample of course text to pick our next cleaning step.
+
+```{r}
+slice_sample(courses_df, n = 60) %>% select(course)
+```
+
+I want to remove any parentheses or brackets and whatever is in them.
+
+```{r}
+pattern <- regex('[\\(\\[].*[\\)\\]]')
+
+courses_df <-
+  courses_df %>%
+  mutate(course = str_remove(course, pattern))
+```
+
+Take a sample to see how that worked.
+
+```{r}
+slice_sample(courses_df, n = 60) %>% select(course)
+```
+
+Let's take a look at the very shortest course names.
+
+```{r}
+courses_df %>%
+  filter(str_length(course) < 10) %>%
+  arrange(str_length(course)) %>%
+  select(course)
+```
+I saw nothing under length 7 that was worth saving.
+
+```{r}
+courses_df <-
+  courses_df %>%
+  filter(str_length(course) >= 7)
+
+nrow(courses_df)
+```
+
+There were 1,159 courses under length 7 that we removed, bringing our total
+down to 14,435.
+
+Sampling to review:
+
+```{r}
+slice_sample(courses_df, n = 60) %>% select(course)
+```
+
+I want to get rid of the course code and department abbreviation at the 
+beginning of course text. 
+
+Previewing what would removed if I targetted words with mixed letters and 
+numbers at the beginning of course text:
+
+```{r}
+pattern <- regex('^\\w*\\d[\\w\\d[:punct:]]+[[:space:]]?[[:punct:]]?[[:space:]]?')
+
+courses_df %>% 
+  mutate(extracted = str_extract(course, pattern)) %>%
+  filter(!is.na(extracted)) %>%
+  select(extracted)
+```
+
+That looks good to me. Let's remove it.
+
+```{r}
+courses_df <-
+  courses_df %>%
+  mutate(course = str_remove(course, pattern))
+```
+
+And sample the course after this cleaning:
+
+```{r}
+courses_df %>% slice_sample(n = 50) %>% select(course)
+```
+
+Going to try again because there are still course codes etc. left starting 
+the course stings.
+
+Here's a preview:
+
+```{r}
+pattern <- regex('^[:alpha:]{2,5}[:blank:]?[:digit:]{3,4}', ignore_case = TRUE)
+
+courses_df %>% 
+  mutate(extracted = str_extract(course, pattern)) %>%
+  filter(!is.na(extracted)) %>%
+  select(extracted)
+```
+
+Let's do it.
+
+```{r}
+courses_df <- 
+  courses_df %>%
+  mutate(course = str_remove(course, pattern))
+```
+
+And sample the results:
+
+```{r}
+slice_sample(courses_df, n = 60) %>% select(course)
+```
+
+Looking good! 
+
+Let's get rid of any punctuation characters at the start of 
+courses. First I'm going to trim any leading blank spaces, then trim the punctuation, then trim any remaining whitespace.
+
+OK, now to remove the leading punctuation.
+
+```{r}
+pattern <- regex('^[[:punct:]]')
+
+courses_df <-
+  courses_df %>%
+  mutate(course = str_trim(course, side = 'left'),
+         course = str_remove(course, pattern),
+         course = str_trim(course, side = 'left'))
+```
+
+Sampling the results:
+
+```{r}
+courses_df %>% slice_sample(n = 50) %>% select(course)
+```
+Looking pretty good!
+
+Bet we have a bunch of short stubs if we sort by length.
+
+```{r}
+courses_df %>%
+  filter(str_length(course) < 7) %>%
+  select(course) %>%
+  arrange(str_length(course)) 
+```
+
+Yeah, it's a bunch of blanks.
+
+Let's remove them and see what we have left.
+
+```{r}
+courses_df <-
+  courses_df %>%
+  filter(str_length(course) >= 7)
+
+nrow(courses_df)
+```
+
+There were 824 short courses after our recent cleaning steps. We're now down 
+to 13,611 courses.
+
+Sampling the results:
+
+```{r}
+slice_sample(courses_df, n = 100) %>% select(course)
+```
+
+Let's try removing some stop words.
+
+I'm thinking:
+- required
+- elective
+- course
+- courses
+- credits
+- credit
+- choose
+- following
+- summer
+- fall
+- winter
+- spring
+
+Some of these indicate a phrase which is not a course at all, like "Required courses".
+
+Say the course text was "Required Statistics Courses". If we pull out "required" and
+"courses", we're left with "statistics" which sounds like the name of a course. But it's not.
+
+In that case, we just want to delete the whole course text if we find "required". 
+
+This includes:
+- course
+- courses
+- required
+- requirements
+- elective
+- choose
+- following
+
+For other words, we just want to remove the word but leave the rest of the text. 
+
+Example: "Data Mining 3 Credits". We want to remove "Credits" (and later, "3") but 
+we should keep "Data Mining". 
+
+These words are:
+- credits
+- credit
+- cr
+- hour
+- hr
+- hours
+
+I'm not sure what to do with fall/winter/spring/summer yet. 
+
+Starting by deleting full course text:
+
+```{r}
+pattern <- regex('course|courses|required|requirements|elective|choose|following', ignore_case = T)
+
+courses_df %>%
+  filter(str_detect(course, pattern)) %>%
+  select(course)
+```
+
+This looks great. Let's get rid of 'em.
+
+```{r}
+courses_df <- 
+  courses_df %>%
+  filter(!str_detect(course, pattern))
+
+nrow(courses_df)
+```
+
+This removed 1,427 courses that were not actually courses, more likely 
+headers and stuff from course sections of websites. We're down to 12,184.
+
+How's it look?
+
+```{r}
+slice_sample(courses_df, n = 100) %>% select(course)
+```
+
+Now let's remove those other words but not delete the whole course text.
+
+```{r}
+pattern <- regex('credits|credit|hour|hours|semester|units', ignore_case = T)
+
+courses_df %>%
+  mutate(course = str_remove_all(course, pattern)) %>%
+  select(course)
+```
+
+That looks good. Let's do it.
+
+```{r}
+courses_df <-
+  courses_df %>%
+  mutate(course = str_remove_all(course, pattern)) 
+
+nrow(courses_df)
+```
+
+So we pulled some stop words, but unlike the previous step we did not remove 
+entire rows containing the stop words. I figure there are some newly short 
+courses that we can remove as a result. 
+
+```{r}
+courses_df <-
+  courses_df %>%
+  filter(str_length(course) >= 7)
+
+nrow(courses_df)
+```
+
+OK, 194 short courses removed. Down to 11,990 courses. 
+
+Let's take a random slice and see how it's looking:
+
+```{r}
+slice_sample(courses_df, n = 100) %>% select(course)
+```
+
+Pretty clean! One of the last things to do is get rid of numbers.
+
+Preview of what we will extract:
+
+```{r}
+pattern <- regex('\\w*\\d\\w*')
+
+courses_df %>%
+  mutate(extracted = str_extract(course, pattern)) %>%
+  filter(!is.na(extracted)) %>%
+  select(extracted, course) 
+```
+
+That's good. Let's do it.
+
+```{r}
+courses_df <-
+  courses_df %>%
+  mutate(course = str_remove(course, pattern))
+```
+
+```{r}
+slice_sample(courses_df, n = 100) %>% select(course)
+```
+
+OK so I think I went as far as I could go in R. 
+
+Exporting the data so that I can manually clean it up row by row in a spreadsheet.
+
+```{r}
+readr::write_csv(courses_df, file = file.path('intermediate', 'courses_pre_manual_clean.csv'))
+```
+
+I opened it up in [Google sheets](https://docs.google.com/spreadsheets/d/178EsntNONoUQm2Y49HyBacRXxSWlGXOtbF-alaODVvY/edit#gid=1901186123) and inspected it row by row. 
+
+The main things I removed:
+- department/course codes ("BUSADM345")
+- credit numbers ("3 cr")
+- non-course text ("Data Science Concentration:")
+- 2 courses in one row ("Data science OR Statistics")
+  + I removed the second course in this case
+- Misc. punctuation left over from cleaning
+- Instructor names
+
+Loading up the manually cleaned spreadsheet:
+
+```{r}
+courses_df2 <-
+  readr::read_csv(file = file.path('intermediate', 'courses_post_manual_clean.csv')) %>%
+  select(degree_id, course) %>%
+  filter(!is.na(course))
+```
+
+So before cleaning we had this many courses:
+
+```{r}
+nrow(courses_df)
+```
+
+And now we have:
+
+```{r}
+nrow(courses_df2)
+```
+
+So we dropped 1,733 rows of non-course text. 
+
+There's still a little bit of cleaning to do. Mostly just trim leading and 
+trailing blank spaces around the course text. 
+
+```{r}
+courses_df2 <- mutate(courses_df2, course = str_trim(course, side = 'both'))
+```
+
+```{r}
+slice_sample(courses_df2, n = 100) %>% select(course)
+```
+
+Still have a few issues:
+
+- some text is all caps
+- have a lot of "I" and "II" ("Physics I or II")
+- there are course duplicates per degree
+
+Lowering all course text:
+
+```{r}
+courses_df2 <-mutate(courses_df2, course = str_to_lower(course))
+```
+
+```{r}
+slice_sample(courses_df2, n = 100) %>% select(course)
+```
+
+Let's try to get rid of some of the roman numerals.
+
+```{r}
+courses_df2 <- courses_df2 %>%
+  mutate(course = str_remove(course, pattern = regex(' i+$')))
+```
+
+```{r}
+slice_sample(courses_df2, n = 100) %>% select(course)
+```
+
+OK, now to remove duplicate courses per degree:
+
+```{r}
+courses_df2 <- distinct(courses_df2, degree_id, course)
+```
+
+This leaves us with:
+
+```{r}
+nrow(courses_df2)
+```
+
+9,184 courses! That's pretty manageable. 
+
+Let's save it and call it a day.
+
+```{r}
+readr::write_csv(courses_df2, file = file.path('..', 'data', 'courses.csv'))
+```
+
+

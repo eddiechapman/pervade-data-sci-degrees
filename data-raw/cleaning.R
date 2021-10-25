@@ -61,7 +61,7 @@ courses_df <-
 degrees_out_path <- file.path('data', 'degrees.csv')
 quotes_out_path <- file.path('data', 'quotes.csv')
 codes_out_path <- file.path('data', 'codes.csv')
-courses_out_path <- file.path('data-raw', 'courses.csv')
+courses_out_path <- file.path('data-raw', 'intermediate', 'courses.csv')
 
 readr::write_csv(degrees_df, file = degrees_out_path)
 readr::write_csv(quotes_df, file = quotes_out_path)

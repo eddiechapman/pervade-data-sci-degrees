@@ -1,0 +1,128 @@
+---
+title: "course_cleaning2"
+output: html_document
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, 
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE, 
+  cache = FALSE
+)
+```
+
+In the first course cleaning step we made the 
+`intermediate/courses_pre_manual_clean.csv` file.
+
+I opened it up in [Google sheets](https://docs.google.com/spreadsheets/d/178EsntNONoUQm2Y49HyBacRXxSWlGXOtbF-alaODVvY/edit#gid=1901186123) and inspected it row by row. 
+
+The main things I removed:
+- department/course codes ("BUSADM345")
+- credit numbers ("3 cr")
+- non-course text ("Data Science Concentration:")
+- 2 courses in one row ("Data science OR Statistics")
+  + I removed the second course in this case
+- Misc. punctuation left over from cleaning
+- Instructor names
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(stringr)
+
+theme_set(theme_classic())
+
+
+courses_df <- readr::read_csv(
+  file.path('intermediate', 'courses_pre_manual_clean.csv'), 
+  show_col_types = FALSE
+)
+
+courses_df2 <- readr::read_csv(
+  file.path('intermediate', 'courses_post_manual_clean.csv')
+)
+```
+
+Removing blanks resulting from the cleaning:
+
+```{r}
+courses_df2 <-
+  courses_df2 %>%
+  select(degree_id, course) %>%
+  filter(!is.na(course))
+```
+
+So before cleaning we had this many courses:
+
+```{r}
+nrow(courses_df)
+```
+
+And now we have:
+
+```{r}
+nrow(courses_df2)
+```
+
+So we dropped 1,733 rows of non-course text. 
+
+There's still a little bit of cleaning to do. Mostly just trim leading and 
+trailing blank spaces around the course text. 
+
+```{r}
+courses_df2 <- mutate(courses_df2, course = str_trim(course, side = 'both'))
+```
+
+```{r}
+slice_sample(courses_df2, n = 100) %>% select(course)
+```
+
+Still have a few issues:
+
+- some text is all caps
+- have a lot of "I" and "II" ("Physics I or II")
+- there are course duplicates per degree
+
+Lowering all course text:
+
+```{r}
+courses_df2 <-mutate(courses_df2, course = str_to_lower(course))
+```
+
+```{r}
+slice_sample(courses_df2, n = 100) %>% select(course)
+```
+
+Let's try to get rid of some of the roman numerals.
+
+```{r}
+courses_df2 <- courses_df2 %>%
+  mutate(course = str_remove(course, pattern = regex(' i+$')))
+```
+
+```{r}
+slice_sample(courses_df2, n = 100) %>% select(course)
+```
+
+OK, now to remove duplicate courses per degree:
+
+```{r}
+courses_df2 <- distinct(courses_df2, degree_id, course)
+```
+
+This leaves us with:
+
+```{r}
+nrow(courses_df2)
+```
+
+9,184 courses! That's pretty manageable. 
+
+Let's save it and call it a day.
+
+```{r}
+readr::write_csv(courses_df2, file = file.path('..', 'data', 'courses.csv'))
+```
+

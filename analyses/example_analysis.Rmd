@@ -23,20 +23,55 @@ theme_set(theme_classic())
 
 
 codes_df <- readr::read_csv(
-  file.path('..', 'data', 'codes.csv'), 
+  file = file.path('..', 'data', 'codes.csv'), 
   show_col_types = FALSE
 )
 
 degrees_df <- readr::read_csv(
-  file.path('..', 'data', 'degrees.csv'), 
+  file = file.path('..', 'data', 'degrees.csv'), 
   show_col_types = FALSE
 )
 
 quotes_df <- readr::read_csv(
-  file.path('..', 'data', 'quotes.csv'), 
+  file = file.path('..', 'data', 'quotes.csv'), 
+  show_col_types = FALSE
+)
+
+courses_df <- readr::read_csv(
+  file = file.path('..', 'data', 'courses.csv'),
   show_col_types = FALSE
 )
 ```
+
+## Descriptive 
+
+How many degrees are there? From the Google spreadsheet
+
+```{r}
+degrees_df %>% nrow()
+```
+
+Distribution of codes per degree:
+
+I think there are 4 degrees that have no codes at all.
+
+```{r}
+degrees_df %>%
+  left_join(codes_df) %>%
+  filter(is.na(quote_id))
+```
+
+How many have course codes?
+
+```{r}
+degrees_df %>%
+  left_join(codes_df) %>%
+  filter(code == 'Courses') %>%
+  distinct(degree_id) %>%
+  nrow()
+```
+
+
 
 ## Data exploration
 
@@ -142,7 +177,7 @@ in business.
 code_ratios <-
   degrees_df %>%
   left_join(codes_df) %>%
-  filter(degree_category == 'data') %>%
+  filter(degree_category == 'Data') %>%
   filter(degree_level %in% c('masters', 'certificate')) %>%
   filter(!code %in% c('[!!]', '[??]')) %>%
   filter(!is.na(code)) %>%
@@ -158,9 +193,71 @@ code_ratios %>%
   ggplot(aes(code, logratio, fill = logratio < 0)) +
   geom_col(show.legend = TRUE, width = 0.5) +
   coord_flip() +
-  labs(subtitle="For codes in masters and certificate data programs", 
-       title= "Log odds ratio") + 
+  labs(subtitle="For codes in masters and certificate data programs",
+       title= "Log odds ratio") +
   ylab('log odds ratio') +
   scale_fill_discrete(name = "", labels = c('Masters', 'Certificate'))
 
+```
+
+```{r}
+code_ratios <-
+  degrees_df %>%
+  left_join(codes_df) %>%
+  filter(degree_category == 'Business') %>%
+  filter(degree_level %in% c('masters', 'certificate')) %>%
+  filter(!code %in% c('[!!]', '[??]')) %>%
+  filter(!is.na(code)) %>%
+  select(degree_level, code) %>%
+  count(degree_level, code) %>%
+  tidyr::pivot_wider(names_from = degree_level, values_from = n, values_fill = 0) %>%
+  mutate_if(is.numeric, list(~(. + 1) / (sum(.) + 1))) %>%
+  mutate(logratio = log(masters / certificate)) %>%
+  arrange(desc(logratio))
+
+code_ratios %>%
+  mutate(code = reorder(code, logratio)) %>%
+  ggplot(aes(code, logratio, fill = logratio < 0)) +
+  geom_col(show.legend = TRUE, width = 0.5) +
+  coord_flip() +
+  labs(subtitle="For codes in masters and certificate business programs",
+       title= "Log odds ratio") +
+  ylab('log odds ratio') +
+  scale_fill_discrete(name = "", labels = c('Masters', 'Certificate'))
+
+```
+
+Course data
+
+
+Sample of course data text
+
+```{r}
+slice_sample(courses_df, n = 100) %>% select(course)
+```
+```{r}
+nrow(courses_df)
+```
+
+What percentage of degree programs have no courses?
+
+```{r}
+no_courses <- 
+  degrees_df %>%
+  left_join(courses_df) %>%
+  filter(is.na(course)) %>%
+  nrow()
+
+(no_courses / nrow(degrees_df)) * 100
+```
+
+
+Course number distribution
+
+```{r}
+courses_df %>%
+  group_by(degree_id) %>%
+  count() %>%
+  ggplot(aes(x = n)) +
+  geom_histogram(binwidth = 1)
 ```
