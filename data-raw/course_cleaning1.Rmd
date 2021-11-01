@@ -29,6 +29,14 @@ courses_df <- readr::read_csv(
 )
 ```
 
+Define a sampling function to quickly peak at the data:
+
+```{r}
+peak <- function(df) {
+  return(slice_sample(df, n = 100) %>% select(course))
+}
+```
+
 
 There are 788 unique degrees we found and put in the Google spreadsheet. Of the 
 788, we coded course information for 672 of them. Most of the course codes 

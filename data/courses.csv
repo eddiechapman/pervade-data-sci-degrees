@@ -1,6 +1,8 @@
 degree_id,course
-2,big data
-2,predictive modeling
+2,big data i
+2,big data ii
+2,predictive modeling i
+2,predictive modeling ii
 2,communicating quantitative results in business
 3,advanced marketing analysis
 3,global business
@@ -10,11 +12,11 @@ degree_id,course
 3,statistical methods
 3,statistical data management
 3,advanced statistical data management
-3,data mining
+3,data mining i
 3,advanced data mining
-4,statistical methods
+4,statistical methods i
 4,statistical data management
-4,knowledge discovery and data mining
+4,knowledge discovery and data mining i
 4,advanced data mining
 4,management science and spreadsheet modeling
 4,systems simulation
@@ -93,17 +95,22 @@ degree_id,course
 21,programming fundamentals
 21,c programming for engineers
 21,written communication for the sciences
-21,analytic geometry and calculus
+21,analytic geometry and calculus i
+21,analytic geometry and calculus ii
+21,analytic geometry and calculus iii
 21,introduction to linear algebra
 21,applied matrix theory
-21,biometrics
-21,business and economic statistics
-21,introductory probability and statistics
+21,biometrics ii
+21,business and economic statistics ii
+21,introductory probability and statistics i
+21,introductory probability and statistics ii
 21,regression and analysis of variance
 21,applied linear statistical models
 21,introduction to the sas computing
 21,introduction to r computing
 21,introduction to statistics
+21,biometrics i
+21,business and economic statistics i
 21,sample survey methods
 21,design of experiments
 23,financial accounting
@@ -174,8 +181,9 @@ degree_id,course
 26,reporting and auditing fair value estimates
 26,data analytics for accountants
 29,mathematics for data scientists
-29,machine learning and data analysis
+29,machine learning and data analysis i
 29,unstructured data and natural language processing
+29,machine learning and data analysis ii
 29,data science leadership and entrepreneurism
 29,distributed and scalable date engineering
 29,special topics in data science
@@ -690,8 +698,9 @@ degree_id,course
 105,applied categorical data analysis
 105,applied multivariate data analysis
 105,data mining
+105,data mining ii
 105,applied binary classification
-107,mathematical statistics
+107,mathematical statistics i
 107,statistical computing and simulation
 107,statistical methods
 107,applied regression analysis
@@ -742,7 +751,7 @@ degree_id,course
 112,introduction to data science
 112,fundamentals of web programming
 112,database design and querying
-112,introduction to computer science
+112,introduction to computer science i
 112,applied statistics
 112,data analysis and visualization
 112,applied machine learning
@@ -846,7 +855,8 @@ degree_id,course
 120,advanced data mining and analytics
 120,special topics in data science
 120,research methods in data science
-120,thesis
+120,thesis i
+120,thesis ii
 122,data mining
 122,"data integration, warehousing, and provenance"
 122,advanced data mining
@@ -899,7 +909,8 @@ degree_id,course
 126,operations analytics
 127,elements of statistical consulting
 127,sas programming and applied statistics
-127,probability and statistical theory
+127,probability and statistical theory i
+127,probability and statistical theory ii
 127,statistical design of analysis of experiments
 127,applied regression analysis
 127,stochastic processes
@@ -938,8 +949,9 @@ degree_id,course
 133,accounting and finance for analytics managers
 133,capstone project
 133,thesis research
-134,microeconomics
-134,statistics
+134,microeconomics i
+134,statistics i
+134,statistics ii
 134,databases for public policy
 134,summer internship
 135,statistical analysis
@@ -1032,7 +1044,8 @@ degree_id,course
 146,data structures
 146,fundamentals of computing theory
 146,programming languages
-146,introduction to programming
+146,introduction to programming i
+146,introduction to programming ii
 146,theory of computing
 146,computational complexity
 146,algorithms design and analysis
@@ -1043,7 +1056,7 @@ degree_id,course
 146,programming language foundations
 146,parallelism in programming languages and systems
 146,distributed systems
-146,hardware system design
+146,hardware system design i
 146,computer architecture
 146,security for networked systems
 146,malware epidemic: threat and defense
@@ -1078,8 +1091,8 @@ degree_id,course
 146,topics in artificial intelligence
 146,database theory and systems design
 146,database systems and internal design
-146,software engineering management
-146,software management implementation
+146,software engineering management i
+146,software management implementation ii
 146,topics in database and information systems
 146,advanced scientific computing
 146,topics in scientific computing
@@ -1092,9 +1105,11 @@ degree_id,course
 146,pervasive computing
 146,advanced operating systems
 146,computer networks
+146,hardware system design ii
 146,embedded and real-time systems
 146,applied machine learning
-146,software engineering
+146,software engineering i
+146,software engineering ii
 146,scientific computing
 146,object-oriented software management
 146,graduate independent study
@@ -1168,6 +1183,7 @@ degree_id,course
 147,structural bioinformatics
 147,computational techniques in comparative genomics
 147,ethnography of information
+147,seminar in health informatics i
 147,thesis/project bioinformatics
 147,thesis/project in human-computer interaction
 147,research in informatics
@@ -1197,7 +1213,8 @@ degree_id,course
 149,bioinformatics thesis
 149,bioinformatics project
 152,applied linear algebra
-152,applied statistics
+152,applied statistics i
+152,applied statistics ii
 152,communication and data science
 152,computer programming
 152,data analytics and outcomes improvement
@@ -1571,7 +1588,8 @@ degree_id,course
 188,big data processing using hadoop
 188,independent research project in bioinformatics
 188,biotechnology
-188,advanced cell biology
+188,advanced cell biology i
+188,advanced cell biology ii
 188,human molecular genetics
 188,principles of immunology
 188,microbiology
@@ -1599,11 +1617,11 @@ degree_id,course
 197,strategy in a global environment
 198,pattern recognition and data mining
 198,advanced geographic information systems
-198,data mining techniques
+198,data mining techniques i
 198,databases
 198,applied data engineering
 198,quantitative methods for spatial analysis
-198,applied statistical methods
+198,applied statistical methods i
 195,market-based management
 195,customer analysis
 195,advanced marketing analysis
@@ -1670,7 +1688,7 @@ degree_id,course
 224,programming for data scientists
 224,health data management and standards
 224,high performance computing in the healthcare industry
-224,foundations of outcomes research
+224,foundations of outcomes research i
 224,foundations of medical diagnosis and treatment
 224,communication and leadership in the healthcare industry
 224,capstone experience
@@ -1719,7 +1737,7 @@ degree_id,course
 230,logistic regression
 230,analysis of tables
 230,statistics assessments
-230,analytics methods and applications
+230,analytics methods and applications i
 230,linear algebra
 230,data mining
 230,machine learning
@@ -1729,12 +1747,13 @@ degree_id,course
 230,time series and forecasting
 230,advanced programming
 230,customer analytics
-230,analytics practicum
+230,analytics practicum i
 230,data privacy and security
 230,legal issues
 230,geospatial data
 230,project management
 230,technical writing
+230,analytics methods and applications ii
 230,advanced modeling
 230,survival analysis
 230,big data
@@ -1744,6 +1763,7 @@ degree_id,course
 230,web analytics
 230,advanced exploratory and outlier analysis
 230,advanced data mining
+230,analytics practicum ii
 230,data ethics
 230,visual communication of data
 239,business performance management
@@ -1797,22 +1817,26 @@ degree_id,course
 246,capstone in data analytics
 246,project management
 246,information technology
-235,applied statistics
-235,theory of statistics
+235,applied statistics i
+235,applied statistics ii
+235,theory of statistics i
+235,theory of statistics ii
 235,topics in statistics
 235,linear statistical models
 235,multivariate analysis
-235,applied probability
-235,analysis
+235,applied probability i
+235,applied probability ii
+235,analysis i
 235,numerical linear algebra
-235,probability theory
-235,real analysis
+235,probability theory i
+235,probability theory ii
+235,real analysis i
 235,research seminar
 217,marketing analytics major or minor:
 217,marketing research
 217,consumer behavior
 217,marketing analytics fundamentals
-217,marketing analytics
+217,marketing analytics ii
 217,marketing analytics practicum
 217,marketing analytics internship
 217,database management and design
@@ -1827,14 +1851,15 @@ degree_id,course
 249,oracle sql fundamentals
 249,foundation of data analytics
 249,fundamentals of data mining
-249,data analytics
+249,data analytics i
+249,data analytics ii
 249,decision support presentation
 249,capstone in data analytics
 249,introduction to data and information management
 249,database design
 249,project management in information technology
 249,management science through spreadsheets
-249,business law
+249,business law i
 249,public relations
 249,social media
 247,advanced information technology
@@ -1863,7 +1888,8 @@ degree_id,course
 254,information security
 254,information technology in the digital era
 254,machine learning
-254,object oriented programming
+254,object oriented programming i
+254,object oriented programming ii
 254,supply chain solutions
 254,analytics for business intelligence
 254,business forecasting
@@ -1938,7 +1964,7 @@ degree_id,course
 266,applied statistical computation with sas
 266,functional data analysis
 266,computationally intensive statistical methods
-266,econometrics
+266,econometrics i
 266,theory of interest
 266,quantitative genomics and genetics
 266,computational genetics and genomics
@@ -2022,7 +2048,7 @@ degree_id,course
 272,data mining
 272,algorithms and data analysis
 272,statistics
-272,statistical methods and computation
+272,statistical methods and computation i
 272,business information technology
 272,systems analysis and design
 272,business modeling with advanced spreadsheet methods
@@ -2060,7 +2086,8 @@ degree_id,course
 277,urban spatial analytics
 277,urban decision models
 277,"data governance, ethics & privacy lab"
-277,urban science intensive
+277,urban science intensive i
+277,urban science intensive ii
 277,machine learning for cities
 277,data visualization
 277,advanced topics
@@ -2072,7 +2099,7 @@ degree_id,course
 277,advanced spatial analytics
 277,monitoring cities
 277,urban big data management and analysis
-274,data management
+274,data management i
 274,introduction to data analysis & computational statistics
 274,decision support systems
 274,data mining & predictive analytics
@@ -2119,7 +2146,7 @@ degree_id,course
 286,introduction to econometrics
 286,"strategy, technology and competition"
 286,critical data mapping
-286,financial management
+286,financial management i
 286,financial computation
 286,data and society
 286,supply chain analytics
@@ -2205,7 +2232,7 @@ degree_id,course
 299,sample design
 299,applied nonparametric statistics
 299,statistical quality control
-299,experimental design
+299,experimental design ii
 299,applied multivariate analysis
 299,discrete data analysis
 299,seminar in statistics
@@ -2222,15 +2249,18 @@ degree_id,course
 299,managing strategic human resources
 299,services marketing management
 299,global supply chain management
-299,probability theory
-299,mathematical statistics
+299,probability theory i
+299,mathematical statistics ii
 299,business database management
 299,linear and integer programming
 299,regression analysis
+299,experimental design
 299,time series analysis
 299,data mining
-299,actuarial mathematics
-299,introduction to real analysis
+299,actuarial mathematics i
+299,actuarial mathematics ii
+299,introduction to real analysis i
+299,introduction to real analysis ii
 299,statistical distribution theory
 299,sequential statistical inference
 299,survival analysis
@@ -2242,10 +2272,11 @@ degree_id,course
 300,database management
 300,exploratory data analysis
 300,decision optimization
-300,analytics project
+300,analytics project i
 300,time-series analysis and forecasting
 300,data mining
 300,big data analytics
+300,analytics project ii
 300,advanced data analytics
 300,project management
 303,principles of chemistry for engineers
@@ -2262,14 +2293,16 @@ degree_id,course
 303,software engineering
 303,professional communication for engineers
 303,introduction to linear algebra for applications
-303,calculus for science and engineering
+303,calculus for science and engineering i
+303,calculus for science and engineering ii
+303,calculus for science and engineering iii
 303,elementary differential equations
 303,general physics i - mechanics
 303,general physics ii - electricity and magnetism
 303,signals and systems
 303,signal processing
 303,statistics for signal processing
-303,computer networks
+303,computer networks i
 303,intro to operating systems and concurrent programming
 303,machine learning for big data
 303,data mining for big data
@@ -2283,7 +2316,8 @@ degree_id,course
 303,introduction to probability
 303,data analysis and linear models
 303,design requirement
-303,engineering projects
+303,engineering projects i
+303,engineering projects ii
 303,introduction to databases: ds major
 304,introduction to business analytics
 304,applied business analytics
@@ -2300,7 +2334,7 @@ degree_id,course
 304,data mining
 304,time series analysis
 304,categorical data analysis
-304,operations research
+304,operations research i
 306,introduction to business statistics
 306,independent studies.
 306,supplementary business statistics
@@ -2333,7 +2367,7 @@ degree_id,course
 306,introduction to data mining in business
 306,managing the intelligent enterprise
 306,business analytics practicum
-306,enabling technology topics
+306,enabling technology topics i
 306,management of information technology
 306,introduction to predictive analytics
 306,managing data for business analytics
@@ -2385,7 +2419,8 @@ degree_id,course
 312,introduction to database systems
 312,introduction to probability for data analytics
 312,introduction to statistical inference for data analytics
-312,statistical modeling for discovery
+312,statistical modeling for discovery i
+312,statistical modeling for discovery ii
 312,bayesian analysis and statistical decision making
 312,systems modeling and optimization for analytics
 312,introduction to statistical learning
@@ -2405,7 +2440,8 @@ degree_id,course
 313,advanced database management and design in healthcare settings
 313,leveraging analytics and business intelligence tools for healthcare
 314,mathematics prerequisites
-314,calculus
+314,calculus i
+314,calculus ii
 314,multivariable calculus
 314,linear algebra
 314,fundamental computing knowledge
@@ -2518,7 +2554,7 @@ degree_id,course
 322,intelligent systems project
 322,question answering
 322,applied research methods
-322,applied econometrics i &
+322,applied econometrics i & ii
 322,social web
 322,e-learning design principles and methods
 322,"applied gadgets, sensors & activity recognition"
@@ -2567,11 +2603,14 @@ degree_id,course
 329,public health informatics
 332,exploratory analyses
 332,data visualization
-332,machine learning
-332,analytical methods
+332,machine learning i
+332,machine learning ii
+332,analytical methods iii
 332,analytics i: principles and applications
 332,analytics ii: principles and applications
+332,analytical methods i
 332,exploratory data analysis
+332,analytical methods ii
 332,functional programming methods for analytics
 332,research methodology and writing
 332,applied project in anly
@@ -2610,11 +2649,13 @@ degree_id,course
 344,python programming language
 347,population health management concentration
 349,biostatistics seminar
-349,introduction to statistical methods
-349,introduction to statistical theory
+349,introduction to statistical methods i
+349,introduction to statistical theory i
 349,mathematical methods for statistics
 349,principles of epidemiology
 349,public health grand rounds
+349,introduction to statistical methods ii
+349,introduction to statistical theory ii
 349,applied regression analysis
 349,sas for data management & analysis
 349,essentials of public health
@@ -2639,7 +2680,8 @@ degree_id,course
 350,information systems and network infrastructure protection
 352,statistical methods
 352,statistical programming
-352,statistical theory
+352,statistical theory i
+352,statistical theory ii
 352,regression methods
 352,linear models
 352,multivariate methods
@@ -2657,7 +2699,8 @@ degree_id,course
 352,sampling methods
 352,stochastic processes
 352,data mining & predictive analytics
-352,selected topics
+352,selected topics i
+352,selected topics ii
 352,independent study
 361,leadership and communication
 361,leadership for the scientist-manager
@@ -2718,7 +2761,8 @@ degree_id,course
 384,image processing
 384,natural language processing
 384,artificial intelligence
-384,advanced scientific computing
+384,advanced scientific computing ii
+384,advanced scientific computing i
 384,database systems
 384,advanced algorithms
 384,scientific visualization
@@ -2778,7 +2822,8 @@ degree_id,course
 356,advanced business finance
 356,advanced valuation and corporate financial analysis
 356,finance internship
-356,applied portfolio management
+356,applied portfolio management i
+356,applied portfolio management ii
 356,enterprise data management
 356,business analytics
 356,special topics in information management
@@ -2818,11 +2863,14 @@ degree_id,course
 356,data science capstone
 356,introductory calculus
 356,linear algebra
-356,discrete structures
-356,statistical methods
-356,statistical learning
-356,computer programming
+356,discrete structures i
+356,statistical methods i
+356,statistical methods ii
+356,statistical learning i
+356,statistical learning ii
+356,computer programming i
 356,programming i laboratory
+356,computer programming ii
 356,data structures and algorithms
 356,advanced algorithms
 356,data mining
@@ -2838,15 +2886,17 @@ degree_id,course
 356,architecture of advanced computer systems
 356,service-oriented computing
 356,principles of computer graphics
+356,discrete structures ii
 356,differential equations
 356,axiomatic geometry
 356,advanced linear algebra
-356,abstract algebra
-356,advanced calculus
+356,abstract algebra ii
+356,advanced calculus ii
 356,complex analysis
 356,reading and research
 356,partial differential equations
-356,mathematical statistics
+356,mathematical statistics i
+356,mathematical statistics ii
 356,numerical analysis
 356,linear models
 356,linear programming and optimization
@@ -2874,7 +2924,7 @@ degree_id,course
 389,high-performance computing
 389,scientific and statistical visualization
 389,topics in computational sciences and informatics
-389,computational fluid dynamics
+389,computational fluid dynamics i
 389,topics in bioinformatics
 389,numerical linear algebra
 389,the mathematics of the finite element method
@@ -2911,7 +2961,7 @@ degree_id,course
 345,health information management systems applications
 345,health information management systems data and infrastructure
 360,introduction to r
-360,statistical methods
+360,statistical methods ii
 360,statistical programming
 370,current lit in bioinformatics
 370,research seminar in bioinformatics
@@ -2943,7 +2993,8 @@ degree_id,course
 370,r for data proc and visual
 370,intro to applied statistics
 370,intro statistical theory
-370,statistical learning
+370,statistical learning i
+370,statistical learning ii
 370,stat gene expression
 370,adv prog in sas
 370,statistical programming w/ r
@@ -2954,7 +3005,8 @@ degree_id,course
 370,bayesian inference
 370,bootstrap and other re-sampling methods
 370,bus database systems
-370,biostatistical methods
+370,biostatistical methods i
+370,biostatistical methods ii
 370,biostat in bioinformatics
 390,analytics: big data to information
 390,principles of data management and mining
@@ -2963,7 +3015,7 @@ degree_id,course
 390,analytics and decision analysis
 390,operations research: deterministic models
 390,applied statistics and visualization for analytics
-390,applied statistics
+390,applied statistics i
 397,introduction to the healthcare environment
 397,introduction to electronic health record systems
 397,applied statistics
@@ -3106,9 +3158,10 @@ degree_id,course
 537,data science
 537,regression
 537,statistical machine learning
-550,fundamentals of computing
-550,probability & statistics
-550,calculus
+550,fundamentals of computing i
+550,fundamentals of computing ii
+550,probability & statistics i
+550,calculus i
 550,databases
 550,data mining
 550,intermediate stat. methods for data science
@@ -3128,11 +3181,14 @@ degree_id,course
 555,data exploration and visualization
 555,database systems
 555,case analysis capstone
-555,data analytics
-555,machine learning
+555,data analytics i
+555,data analytics ii
+555,machine learning i
+555,machine learning ii
 555,probability for data analytics
 555,statistical inference for data analytics
-555,data mining
+555,data mining i
+555,data mining ii
 561,basic quant methods
 561,programming
 561,data and databases
@@ -3143,7 +3199,8 @@ degree_id,course
 561,topics in operations and supply chain analytics
 561,topics in fe/ac analytics
 561,topics in hr analytics
-562,big data
+562,big data i
+562,big data ii
 562,information visualization
 562,machine learning and data analysis for business and finance
 562,applied econometrics with r
@@ -3157,7 +3214,7 @@ degree_id,course
 562,supply chain analytics
 562,applications of system dynamics
 562,internship in business analytics
-562,advanced econometrics
+562,advanced econometrics i
 562,technolgical rivalry
 562,investments\corp fin or fin  investments
 562,corporate financial modeling
@@ -3221,15 +3278,17 @@ degree_id,course
 577,advanced computer processing of statistical data
 577,statistical analysis
 577,data preparation
-577,data mining methodology
+577,data mining methodology i
+577,data mining methodology ii
 578,parallel and distributed database systems
 578,machine learning
 578,parallel and cloud computation
 578,network science
-578,data mining methodology
+578,data mining methodology i
+578,data mining methodology ii
 578,project in data analytics
 578,statistical analysis
-578,text mining
+578,text mining i
 578,social media and network analysis
 578,computational analysis of social complexity
 578,interactive data visualization
@@ -3241,8 +3300,9 @@ degree_id,course
 579,data warehousing and business intelligence
 579,managing business intelligence projects
 579,database design
-579,data mining
+579,data mining ii
 579,data visualization
+579,data mining i
 579,data mining for business intelligence
 581,machine learning
 581,data visualization
@@ -3297,7 +3357,8 @@ degree_id,course
 582,engineering hydrology
 582,advanced algorithms
 582,computer graphics
-582,database systems
+582,database systems i
+582,database systems ii
 582,machine learning and data mining
 582,multimedia
 582,data reduction in physical sciences
@@ -3317,7 +3378,8 @@ degree_id,course
 584,marketing research
 584,digital marketing analytics
 584,foundations of analytics
-584,big data statistics
+584,big data statistics i
+584,big data statistics ii
 584,experiential learning requirement
 584,applied business analytics
 584,msba internship
@@ -3383,7 +3445,8 @@ degree_id,course
 597,intro to game theory
 597,design of manufacturing systems
 597,principles of supply chain management
-597,optimization
+597,optimization i
+597,optimization ii
 597,optimization modeling in finance
 597,mathematical modeling
 597,numerical analysis: linear & nonlinear problems
@@ -3391,15 +3454,15 @@ degree_id,course
 597,intro to financial engineering
 597,tools for financial engineering
 597,service system modeling and design
-597,engineering prob and stat
-597,intro to engineering stochastic processes
+597,engineering prob and stat ii
+597,intro to engineering stochastic processes i
 597,simulation modeling and analysis
 597,monte carlo simulation
 597,monte carlo methods in fe
-597,financial engineering with stochastic calculus
+597,financial engineering with stochastic calculus i
 597,random signals in comm. and signal processing
 597,"evolutionary processes, algorithms, games"
-597,statistical data mining
+597,statistical data mining i
 597,learning with big messy data
 597,"information theory, probabilistic modeling, & deep"
 597,learning with scientific & financial applications
@@ -3454,9 +3517,10 @@ degree_id,course
 602,methods of statistical learning for big data
 602,mathematics and probability for statistics and data mining
 602,biostatistics
-602,foundations of biostatistics
+602,foundations of biostatistics i
 602,foundations of biostatistics ii: regression
 602,epidemiology
+602,epidemiology i
 602,capstone
 602,health data science capstone
 603,essentials of business analytics
@@ -3501,7 +3565,8 @@ degree_id,course
 610,neural networks and deep learning
 611,data acquisition and pre-processing
 611,data analysis and interpretation
-611,data science capstone
+611,data science capstone i
+611,data science capstone ii
 613,data to decision
 613,modeling and representation of data
 613,introduction to text analysis
@@ -3524,12 +3589,13 @@ degree_id,course
 626,technology bootcamp
 626,business statistics
 626,managing big data
-626,machine learning
+626,machine learning ii
 626,capstone/experiential learning
 626,intro to business analytics
 626,data visualization
 626,social network analytics
 626,decision analytics & optimization
+626,machine learning i
 629,business analytics
 629,python for business analytics
 629,databases for business analytics
@@ -3559,7 +3625,8 @@ degree_id,course
 632,software engineering for data analytics
 633,introduction to data science
 633,principles of data mining
-633,data analysis
+633,data analysis i
+633,data analysis ii
 634,data analytics and mining for business
 634,data management in business analytics
 634,foundational concepts for business analytics
@@ -3567,7 +3634,7 @@ degree_id,course
 634,business analytics capstone
 634,programming for analytics
 634,probabilistic optimization for analytics
-634,quantitative methods in business analytics
+634,quantitative methods in business analytics i
 636,mathematics for data analytics
 636,data analytic tools and scripting
 636,machine learning
@@ -3577,7 +3644,7 @@ degree_id,course
 636,data mining
 637,computing for scientists
 637,data ethics in an information society
-637,modeling and simulation
+637,modeling and simulation i
 637,scientific information and data visualization
 637,scientific data and databases
 637,scientific data mining
@@ -3587,14 +3654,18 @@ degree_id,course
 637,topics in computational and data sciences
 637,introduction to social network analysis
 637,machine learning applications in science
+637,modeling and simulation ii
 637,computational science tools
-637,analytic geometry and calculus
-637,discrete mathematics
+637,analytic geometry and calculus i
+637,analytic geometry and calculus ii
+637,discrete mathematics i
 637,linear algebra
-637,numerical analysis
-637,introductory statistics
-637,probability and statistics for engineers and scientists
+637,numerical analysis i
+637,introductory statistics i
+637,introductory statistics ii
+637,probability and statistics for engineers and scientists i
 637,probability for engineers
+637,numerical analysis ii
 637,computational data science
 637,molecular dynamics and monte carlo simulations
 637,electronic structure computations
@@ -3602,10 +3673,11 @@ degree_id,course
 637,internship
 637,capstone in data science
 637,synthesis/capstone
-635,statistics in applications
+635,statistics in applications i
+635,statistics in applications ii
 635,data management and analysis with sas
 635,advanced data management and analysis with sas
-635,computational methods in statistics
+635,computational methods in statistics i
 635,time series and forecasting methods
 635,applied machine learning
 635,supervised research: professional skills seminar
@@ -3622,7 +3694,8 @@ degree_id,course
 639,analytics and decision analysis
 639,applied statistics and visualization for analytics
 641,stochastic foundations: probability models
-641,statistics for analytics
+641,statistics for analytics i
+641,statistics for analytics ii
 641,decision and risk analytics
 641,optimization methods and applications
 641,practicum
@@ -3631,9 +3704,10 @@ degree_id,course
 642,introduction to data science
 642,data warehousing
 642,introduction to data mining
-643,accelerated statistics for public policy
+643,accelerated statistics for public policy i
+643,accelerated statistics for public policy ii
 643,foundations of public policy
-643,intermediate microeconomics
+643,intermediate microeconomics i
 643,comparative policy process
 643,civic data science
 643,data visualization
@@ -3675,10 +3749,10 @@ degree_id,course
 649,applied capstone project
 652,basics of statistical inference
 652,introduction to data science
-652,data science
+652,data science ii
 652,computing for big data
 652,applied machine learning
-652,introduction to epidemiology: methods
+652,introduction to epidemiology: methods i
 652,introduction to data structures and algorithms
 652,genomic data manipulation
 652,computational statistics for biomedical science
@@ -3704,11 +3778,12 @@ degree_id,course
 652,data mining and prediction
 652,advanced regression for environmental epidemiology
 652,introduction to biomedical informatics
-652,foundation of biomedical informatics
+652,foundation of biomedical informatics ii
 652,precision medicine i: genomic medicine
 652,data visualization for biomedical applications
 652,m. clinical informatics
-653,data science
+653,data science i
+653,data science ii
 653,systems development for computational science
 653,critical thinking in data science
 658,statistical learning and data mining
@@ -3763,7 +3838,7 @@ degree_id,course
 665,data mining capstone
 665,interactive computer graphics
 665,programming languages and compilers
-665,software engineering
+665,software engineering i
 665,numerical analysis
 665,parallel computing
 665,internet of things
@@ -3789,7 +3864,7 @@ degree_id,course
 666,data mining capstone
 666,interactive computer graphics
 666,programming languages and compilers
-666,software engineering
+666,software engineering i
 666,numerical analysis
 666,parallel computing
 666,internet of things
@@ -3807,7 +3882,7 @@ degree_id,course
 667,data analytics capstone
 671,introduction to informatics
 671,database design
-671,statistical methods
+671,statistical methods i
 671,data analytics
 671,information policy
 671,informatics research design
@@ -3823,7 +3898,7 @@ degree_id,course
 671,statistical inference
 671,experimental design
 671,measurement theory and interpret data
-671,survey of social psychology
+671,survey of social psychology i
 671,field methods & experimentation
 671,quantitative methods
 671,intermediate soc. statistics
@@ -3835,7 +3910,7 @@ degree_id,course
 671,sampling and survey techniques
 671,applied multivariate analysis
 671,generalized linear model
-671,mathematical statistics
+671,mathematical statistics i
 671,applied decision theory and bayesian statistics
 671,introduction to survival analysis
 671,probability theory
@@ -3892,8 +3967,10 @@ degree_id,course
 678,semantic natural language processing
 678,big data processing using hadoop
 678,introductory stochastic differential equations with applications
-678,probability and stochastic process
-678,theory of statistics
+678,probability and stochastic process i
+678,probability and stochastic process ii
+678,theory of statistics i
+678,theory of statistics ii
 678,queuing theory with applications to computer science
 678,data mining
 678,game theory
@@ -3926,7 +4003,7 @@ degree_id,course
 678,advanced differential equations: partial differential equations
 678,theory of probability
 678,capstone project in data science
-678,independent study in data science
+678,independent study in data science i
 679,introduction to python
 679,intro to programming using java
 679,data structures
@@ -3949,8 +4026,10 @@ degree_id,course
 679,semantic natural language processing
 679,big data processing using hadoop
 679,introductory stochastic differential equations with applications
-679,probability and stochastic process
-679,theory of statistics
+679,probability and stochastic process i
+679,probability and stochastic process ii
+679,theory of statistics i
+679,theory of statistics ii
 679,queuing theory with applications to computer science
 679,data mining
 679,game theory
@@ -3983,7 +4062,8 @@ degree_id,course
 679,theory of probability
 679,independent study
 679,capstone project in data science
-679,independent study in data science
+679,independent study in data science i
+679,independent study in data science ii
 680,data management
 680,statistical analysis
 680,data mining
@@ -4003,7 +4083,7 @@ degree_id,course
 682,categorical data analysis
 682,linear regression
 682,multivariate statistics
-682,sas programming
+682,sas programming i
 682,nonparametric methods
 682,experimental design
 682,mathematical statistics
@@ -4012,9 +4092,12 @@ degree_id,course
 682,data mining and analytics
 682,data science emphasis
 682,data visualization and acquisition
-682,statistical learning
+682,statistical learning i
+682,sas programming ii
 682,measurement for statisticians
 682,survival analysis
+682,mathematical statistics i
+682,statistical learning ii
 686,business analytics
 686,fundamentals of machine learning
 686,advanced data mining and predictive analytics
@@ -4031,14 +4114,14 @@ degree_id,course
 686,econometrics
 686,leadership and organizational change
 686,internship in business analytics
-687,algorithms and programming
+687,algorithms and programming i
 687,enterprise architecture
 687,data science
 687,instructional design
 687,essentials of business mgmt
 687,network management and design technology
 687,capstone project in digital sciences
-687,thesis
+687,thesis i
 687,communication in an information society
 687,"communication, uncertainty and privacy management"
 687,communication and cognition
@@ -4048,6 +4131,7 @@ degree_id,course
 687,design and analysis of algorithms
 687,information security
 687,introduction to cryptology
+687,algorithms and programming ii
 687,advanced database systems design
 687,advanced operating systems
 687,parallel and distributed computing
@@ -4122,10 +4206,11 @@ degree_id,course
 687,graphic design perspectives
 687,user experience design in practice
 687,user experience design principles and concepts
-687,information architecture
-687,researching the user experience
-687,usability
-687,researching user experience
+687,information architecture i
+687,researching the user experience i
+687,usability i
+687,researching user experience ii
+687,usability ii
 687,digital systems management
 687,digital systems software development
 687,digital systems telecommunication networks
@@ -4134,8 +4219,10 @@ degree_id,course
 695,programming for analytics
 695,linear algebra
 695,introduction to statistical packages
-695,data analytics
+695,data analytics i
+695,data analytics ii
 695,data mining
+695,data analytics iii
 695,special topics in business analytics
 695,analytics internship
 695,storytelling with data
@@ -4172,7 +4259,8 @@ degree_id,course
 705,ethical and legal issues in data science
 705,capstone in data science
 705,management leadership and communications
-706,statistical modeling
+706,statistical modeling i
+706,statistical modeling ii
 706,risk theory
 706,predictive modeling
 706,thesis/research
@@ -4266,7 +4354,7 @@ degree_id,course
 724,applied regression analysis
 724,introduction to nonlinear optimization
 724,applied multivariate methods
-725,theory of statistics i &
+725,theory of statistics i & ii
 725,applied regression analysis
 725,time series analysis
 725,applied multivariate methods
@@ -4286,7 +4374,8 @@ degree_id,course
 725,statistical learning and data mining
 725,analysis of numerical algorithms
 725,computational aspects of matrix theory
-725,artificial intelligence
+725,artificial intelligence i
+725,artificial intelligence ii
 725,visualization
 725,sparse matrix computations
 725,introduction to nonlinear optimization
@@ -4297,7 +4386,7 @@ degree_id,course
 725,information theory and coding
 725,data compression
 725,optimization theory
-725,engineering optimization
+725,engineering optimization i
 725,advanced topics in operations research
 725,introduction to distributed systems
 725,principles of database systems
@@ -4316,7 +4405,7 @@ degree_id,course
 725,computer systems performance measurement and evaluation
 725,telecommunications networks
 725,digital communication
-726,statistical inference
+726,statistical inference i
 726,principles of programming with python
 726,statistical programming with r
 726,statistical inference in genetics
@@ -4324,7 +4413,7 @@ degree_id,course
 726,survival analysis
 726,advanced machine learning
 726,statistical consulting
-726,epidemiology
+726,epidemiology i
 726,longitudinal and multilevel models
 726,study design
 726,data science
@@ -4332,7 +4421,7 @@ degree_id,course
 726,dissertation research
 726,essentials of population health science
 726,computational statistics
-727,statistical inference
+727,statistical inference i
 727,principles of programming
 727,advanced analytics
 727,statistical computation
@@ -4342,7 +4431,7 @@ degree_id,course
 727,survival analysis
 727,advanced machine learning
 727,statistical consulting
-727,epidemiology
+727,epidemiology i
 727,longitudinal and multilevel models
 727,data science
 727,directed research
@@ -4362,7 +4451,7 @@ degree_id,course
 732,applied statistics for business analytics
 732,decision risk modeling
 720,contextual inquiry and consulting foundations
-720,programming
+720,programming i
 720,intermediate programming
 720,introduction to statistics and data analysis
 720,data manipulation and analysis
@@ -4404,8 +4493,10 @@ degree_id,course
 739,abstract and real analysis
 739,probability theory
 739,probability and measure
-739,mathematical statistics
-739,linear models
+739,mathematical statistics i
+739,mathematical statistics ii
+739,linear models i
+739,linear models ii
 739,graduate seminar
 739,dissertation
 740,introduction to sql for data analytics
@@ -4423,8 +4514,8 @@ degree_id,course
 741,analytical tools and foundations
 741,introduction to analytics applications
 741,data architecture
-741,analytics applications
-741,analytics practicum
+741,analytics applications i
+741,analytics practicum i
 742,introduction to applied analytic statistics
 742,programming for data science
 742,data architecture
@@ -4457,7 +4548,7 @@ degree_id,course
 748,marketing analytics
 750,design and analysis of algorithms
 750,advanced data structures
-750,statistical methods
+750,statistical methods i
 750,introduction to statistical learning
 750,automated learning and data analysis
 750,database management concepts and systems
@@ -4525,7 +4616,8 @@ degree_id,course
 771,business intelligence tools & techniques
 771,statistics for data science
 771,programming for data science & analytics
-771,research & communications
+771,research & communications i
+771,research & communications ii
 771,practicum in business analytics
 773,descriptive business analytics
 773,predictive business analytics
@@ -4537,10 +4629,12 @@ degree_id,course
 773,advanced data base management
 775,foundations of data analytics
 775,data analytics
+775,data analytics ii
 775,multivariate analytics
 775,time series analytics
 776,foundations of data analytics
-776,data analytics
+776,data analytics i
+776,data analytics ii
 776,multivariate analytics
 776,time series analytics
 776,capstone project
@@ -4578,13 +4672,14 @@ degree_id,course
 793,marketing analytics
 798,visual analytics
 798,data warehousing
-798,data mining
+798,data mining i
 798,applied multivariate data analysis
-791,applied data science
+791,applied data science i
 791,foundations of data science
 791,software engineering for data science
 791,applied statistics
 791,software construction
+791,applied data science ii
 791,introduction to data science: management
 791,applied linear models - regression
 791,graduate capstone
@@ -4634,7 +4729,8 @@ degree_id,course
 807,field study
 808,introduction to data analytics & business concepts
 808,applied statistics review
-808,analytics programming
+808,analytics programming i
+808,analytics programming ii
 808,data management
 808,interactive data visualization
 808,prescriptive analytics
@@ -4681,9 +4777,11 @@ degree_id,course
 816,big data analytics
 816,model analysis
 816,forecasting and time series
-816,data analytics capstone
+816,data analytics capstone i
+816,data analytics capstone ii
 818,statistical programming
-818,modern applied statistics
+818,modern applied statistics i
+818,modern applied statistics ii
 819,advanced systems analysis and design
 819,advanced database management
 819,distributed information systems
@@ -4727,10 +4825,12 @@ degree_id,course
 831,introduction to statistics for data science
 831,foundations of working with data
 831,data mining & machine learning
-831,predictive modeling
+831,predictive modeling i
 831,databases
 831,communicating with data: visualization and presentation
-831,capstone
+831,predictive modeling ii
+831,capstone i
+831,capstone ii
 832,database management systems and design
 832,data analytics and visualization
 832,big data engineering
@@ -4798,10 +4898,11 @@ degree_id,course
 840,predictive analytics
 840,"you as a leader: self-awareness, feedback, and decision-making"
 841,modern computing for mathematicians
-841,topological data analysis
+841,topological data analysis i
+841,topological data analysis ii
 841,optimization methods and nonlinear programming
 841,machine learning
-841,introduction to theory of statistics
+841,introduction to theory of statistics i
 841,applied statistics
 841,nonparametric statistics
 842,intro machine learning
@@ -4837,10 +4938,10 @@ degree_id,course
 843,text mining
 844,"analysis and decision making, and business analytics ."
 847,computational probability and statistics
-847,probability theory
+847,probability theory i
 847,statistical business analytics
 847,biostatistics
-847,mathematical concepts in computing
+847,mathematical concepts in computing ii
 847,linear algebra
 847,linear algebra with computer lab
 847,differential equations with linear algebra
@@ -4916,7 +5017,8 @@ degree_id,course
 853,business and economic forecasting
 853,data science: a programming approach
 853,business analytics capstone project
-855,computer science
+855,computer science i
+855,computer science ii
 855,discrete structures
 855,algorithm analysis and data structures
 855,operating systems concepts
@@ -4960,8 +5062,10 @@ degree_id,course
 863,data analytics applications
 863,data foundations
 863,big data technology
-863,data analytics algorithms
-863,data analytics practicum
+863,data analytics algorithms i
+863,data analytics algorithms ii
+863,data analytics practicum i
+863,data analytics practicum ii
 864,statistics for data science
 864,scripting languages
 864,database concepts
@@ -4975,10 +5079,11 @@ degree_id,course
 864,simulation & optimization
 864,big data security
 868,operating systems principles
-868,database management systems
+868,database management systems i
 868,advanced data structures and algorithm analysis
 868,computer networks
 868,data mining
+868,database management systems ii
 868,security and internet algorithms
 868,social network analysis
 868,big data analytics
@@ -5004,7 +5109,8 @@ degree_id,course
 891,algorithms for business
 891,business applications of text analytics
 891,machine learning for business applications
-891,analytical decision models
+891,analytical decision models i
+891,analytical decision models ii
 873,probabilistic systems analysis
 873,introduction to machine learning and data mining
 873,big data
@@ -5060,7 +5166,8 @@ degree_id,course
 893,capstone
 898,principles of complex systems
 898,modeling complex systems
-898,data science
+898,data science i
+898,data science ii
 899,leadership for the new accounting professional
 899,taxes and business strategics in financial reporting & fraud
 899,advanced topcounting systems & controls
@@ -5069,7 +5176,8 @@ degree_id,course
 899,negotiations
 899,performance measurement & business risk management
 899,valuation issues in accounting
-901,data analytics
+901,data analytics i
+901,data analytics ii
 901,advanced machine learning
 909,data science analytics
 909,data science strategy & leadership
@@ -5091,7 +5199,7 @@ degree_id,course
 914,foundations of business intelligence
 914,ethics and data collection
 914,data management
-914,business statistical methods i &
+914,business statistical methods i & ii
 914,business data mining
 914,decision sciences & analytics
 914,business simulation modeling
@@ -5099,7 +5207,8 @@ degree_id,course
 914,business analytics practicum
 916,fundamentals of data analytics
 916,statistics for data analysis
-916,data mining and analytics
+916,data mining and analytics i
+916,data mining and analytics ii
 916,programming in python
 916,r for data analysts
 916,advanced data visualization
@@ -5140,6 +5249,9 @@ degree_id,course
 905,analytical decision making
 905,data mining
 905,text mining
+905,applied project: digital transformation lab i
+905,applied project: digital transformation lab ii
+905,applied project: digital transformation lab iii
 905,applied project: digital transformation lab
 917,applied data mining for business decision making
 917,statistical software for data management and decision making
@@ -5160,6 +5272,9 @@ degree_id,course
 923,case studies i: the power and breadth of analytics
 923,data driven decisions
 923,case studies ii : targeted applications of analytics
+923,analytics capstone i
+923,analytics capstone ii
+923,analytics capstone iii
 923,analytics capstone
 924,scientific visualization
 924,cloud computing
@@ -5188,7 +5303,8 @@ degree_id,course
 928,predictive analytics
 928,business intelligence
 928,capstone
-928,analytics practicum
+928,analytics practicum i
+928,analytics practicum ii
 928,functional specialization or background
 928,functional specialization
 928,accounting forensics
@@ -5225,10 +5341,13 @@ degree_id,course
 928,data driven marketing and customer management
 928,new product management
 928,research for marketing decisions
-928,quantitative financial analysis
+928,quantitative financial analysis i
 928,quantitative methods in finance
 928,managerial economics and corporate strategy
 928,financial modeling
+928,quantitative financial analysis ii
+928,quantitative methods in finance i
+928,quantitative methods in finance ii
 930,rigorous curriculum with real-world relevance
 930,"internal controls, audit and fraud prevention and detection"
 930,generating audit analytics using accounting information systems
@@ -5239,8 +5358,9 @@ degree_id,course
 930,innovations with auditing technologies
 930,business data visualization
 930,corporate governance and sustainability
-930,data mining
-931,predictive modeling
+930,data mining i
+931,predictive modeling i
+931,predictive modeling ii
 931,enterprising management of the big data environment
 931,tech aspects of big data
 931,communicating quantitative results in business
@@ -5347,7 +5467,7 @@ degree_id,course
 938,introduction to graduate studies
 938,introduction to data science
 938,machine learning
-938,probability and statistics
+938,probability and statistics ii
 938,computational statistics
 938,doctoral comprehensive examination
 938,dissertation
@@ -5384,7 +5504,7 @@ degree_id,course
 948,scope of public health
 948,clinical trials methodology
 948,bayesian statistical methods
-948,statistical inference
+948,statistical inference ii
 948,linear models
 948,analysis of lifetime data
 948,generalized linear models
@@ -5435,7 +5555,7 @@ degree_id,course
 955,statistics
 955,big data tools
 955,big data analytics
-955,calculus
+955,calculus ii
 955,linear algebra
 955,python programming language
 955,database application development
@@ -5477,7 +5597,7 @@ degree_id,course
 953,data management for business analytics
 953,data analytics and mining for business
 953,essential statistics for econometrics
-953,advanced econometrics
+953,advanced econometrics i
 953,computing and machine learning for economics
 953,individual research
 953,strategic marketing analytics
@@ -5485,13 +5605,14 @@ degree_id,course
 953,selected advanced topics
 953,marketing research
 953,career readiness in data analytics
+953,advanced econometrics ii
 953,evidence-based decision analysis
 965,distributed computer systems architecture
 965,implementation of database management systems
 965,computational data science and analytics
 965,mathematical data science and analytics
 965,scientific computing in data science
-965,statistical learning
+965,statistical learning i
 965,"data cleaning, organization, and visualization"
 965,"machine learning, data mining, and analytics"
 965,linear models
@@ -5504,7 +5625,8 @@ degree_id,course
 965,special topics in data science and analytics
 965,geographic information systems
 965,advanced gis: environmental and hazards models
-965,numerical analysis
+965,statistical learning ii
+965,numerical analysis i
 965,linear programming and optimization
 965,operations research
 965,bayesian statistical methods
@@ -5525,7 +5647,9 @@ degree_id,course
 967,linux as a computational platform
 967,genomics data analysis in python
 967,rna-sequencing data analysis
-969,calculus
+969,calculus i
+969,calculus ii
+969,calculus iii
 969,linear algebra
 971,survey of business intelligence and analytics
 971,data visual analysis and visualization
@@ -5546,10 +5670,10 @@ degree_id,course
 972,business analytics project management
 972,financial statement analysis and reporting
 972,data analytics in accounting
-972,object-oriented programming
+972,object-oriented programming i
 972,data warehousing and analytics
 972,data visualization
-972,econometrics – theory and applications
+972,econometrics – theory and applications i
 972,corporate finance
 972,data-driven marketing strategy
 972,marketing analytics with big data
@@ -5583,7 +5707,8 @@ degree_id,course
 973,engineering hydrology
 973,advanced algorithms
 973,computer graphics
-973,database systems
+973,database systems i
+973,database systems ii
 973,machine learning and data mining
 973,multimedia
 973,data reduction in physical sciences
@@ -5598,8 +5723,10 @@ degree_id,course
 976,essentials of bus analytics
 976,data mining
 976,seminar
-976,research development
+976,research development i
 976,information mgt in health care
+976,research development ii
+976,research development iii
 976,clin vocabulary/reimbursement
 976,quality/leadership/info govern
 976,information security planning
@@ -5609,9 +5736,12 @@ degree_id,course
 976,creative and critical thinking
 976,capstone
 976,capstone experience in hiim
-978,data structures
-978,discrete mathematics
-978,calculus
+978,data structures i
+978,discrete mathematics i
+978,calculus i
+978,calculus ii
+978,calculus iii
+978,data structures ii
 978,design and analysis of algorithms
 978,data analysis
 978,data analysis and regression
@@ -5631,12 +5761,15 @@ degree_id,course
 978,concepts of programming languages
 978,web applications
 978,optimized c++
-978,computer systems
+978,computer systems i
+978,computer systems ii
 978,distributed systems
 978,introduction to software engineering
-978,multivariable calculus
+978,multivariable calculus ii
 978,bayesian statistics
-978,probability and statistics
+978,probability and statistics i
+978,probability and statistics ii
+978,probability and statistics iii
 978,stochastic processes
 978,applied time series and forecasting
 978,operations research: linear programming
@@ -5650,12 +5783,14 @@ degree_id,course
 978,geographic information systems i: digital mapping
 978,geographic information systems ii: community gis
 978,remote sensing
+978,remote sensing ii
 978,geographic information systems iii: spatial analysis for sustainability
 978,gis analysis of environmental and public health
 978,web gis and spatial data visualization on the web
 978,information technology
 978,introductory computing for the web
-978,web development
+978,web development i
+978,web development ii
 978,introduction to mobile apps
 978,research
 978,research colloquium
@@ -5674,7 +5809,8 @@ degree_id,course
 979,managing international human resources
 979,"legal, political and ethical dimensions of business"
 979,managerial communication
-979,applications of business analytics
+979,applications of business analytics i
+979,applications of business analytics ii
 979,developing and managing databases for business intelligence
 979,"essentials in accounting, finance and economics"
 979,applied managerial statistics
@@ -5723,13 +5859,14 @@ degree_id,course
 985,programming data structures online lab
 985,algorithms and data structures
 985,software engineering solutions
-985,big data
+985,big data i
 985,software engineering and senior project
 985,data warehousing
 985,data mining
-985,calculus
+985,calculus i
+985,calculus ii
 985,elementary linear algebra
-985,business statistics
+985,business statistics i
 985,statistical methods
 985,applied linear statistical models
 985,linear regression analysis
@@ -5741,27 +5878,29 @@ degree_id,course
 985,enterprise resource planning and architecture
 985,database principles
 985,data and information management
-985,computer organization
+985,computer organization i
 985,computer operating systems
 985,computing network principles
 985,multivariable calculus
 985,introduction to stochastic mathematical modeling
-985,probability and statistics
+985,probability and statistics i
 985,web analytics concentration
 985,social media for business
 985,web content mining
 985,social media network analysis
 985,google analytics and landing page optimization
 985,introduction to information retrieval
+985,big data ii
 985,design and analysis of experiments
 985,introduction to biostatistics
 985,applied statistics
 984,concepts of programming systems
 984,theory of database systems
 984,computer administration and security
-984,software engineering and project management
+984,software engineering and project management i
 984,network applications and security
-984,data structures and algorithms
+984,data structures and algorithms i
+984,software engineering and project management ii
 984,multimedia systems and forensics
 984,internet forensics
 984,database admin and security
@@ -5825,7 +5964,7 @@ degree_id,course
 987,capstone project or thesis
 987,data science capstone project
 990,advanced data management and analysis with sas
-990,statistics in applications
+990,statistics in applications iii
 990,applied survival analysis
 990,analysis of variance and design of experiments
 990,applied regression methods
@@ -5882,13 +6021,14 @@ degree_id,course
 1007,big data
 1010,introduction to advanced biostatistics
 1010,fundamentals of epidemiology
-1010,probability and inference
+1010,probability and inference i
 1010,introduction to biomedical & translational informatics
 1010,capstone
 1010,clinical trials management
 1010,introduction to r programming
-1010,applied linear models
+1010,applied linear models i
 1010,analysis of categorical data
+1010,probability and inference ii
 1010,applied biostatistics in clinical trials
 1010,health economics
 1010,analysis of longitudinal data
@@ -5951,7 +6091,9 @@ degree_id,course
 1015,fundamentals of systems biology and network science
 1015,bioinformatic analysis
 1015,object-oriented programming
-1015,calculus
+1015,calculus i
+1015,calculus ii
+1015,calculus iii
 1015,matrices and linear algebra
 1015,introduction to statistical concepts and methods
 1016,business analytics foundation
@@ -5987,17 +6129,22 @@ degree_id,course
 1021,programming fundamentals
 1021,c programming for engineers
 1021,written communication for the sciences
-1021,analytic geometry and calculus
+1021,analytic geometry and calculus i
+1021,analytic geometry and calculus ii
+1021,analytic geometry and calculus iii
 1021,introduction to linear algebra
 1021,applied matrix theory
-1021,biometrics
-1021,business and economic statistics
-1021,introductory probability and statistics
+1021,biometrics ii
+1021,business and economic statistics ii
+1021,introductory probability and statistics i
+1021,introductory probability and statistics ii
 1021,regression and analysis of variance
 1021,applied linear statistical models
 1021,introduction to the sas computing
 1021,introduction to r computing
 1021,introduction to statistics
+1021,biometrics i
+1021,business and economic statistics i
 1021,sample survey methods
 1021,design of experiments
 1022,design of experiments
@@ -6214,14 +6361,16 @@ degree_id,course
 1058,introduction to experimental design
 1058,multivariate methods
 1058,generalized linear models
-1058,probability and mathematical statistics
+1058,probability and mathematical statistics i
+1058,probability and mathematical statistics ii
 1058,applied survey sampling
 1058,nonparametric statistics
 1058,discrete data analysis
 1058,introduction to biostatistics
 1058,time series
 1058,actuarial statistical risk analysis
-1058,introductory survival and risk analysis
+1058,introductory survival and risk analysis i
+1058,introductory survival and risk analysis ii
 1058,biostatistics
 1058,introduction to bioinformatics
 1058,survival analysis
@@ -6287,7 +6436,8 @@ degree_id,course
 1067,supply chain risk management
 1067,project management
 1067,intermediate accounting concepts
-1067,advanced accounting concepts
+1067,advanced accounting concepts i
+1067,advanced accounting concepts ii
 1067,strategic selling & sales leadership concentration
 1067,building & developing customer relationships
 1067,sales leadership
@@ -6331,7 +6481,8 @@ degree_id,course
 1084,data mining for decision making
 1084,business analytics
 1084,reasoning with statistics
-1064,business analytics
+1064,business analytics i
+1064,business analytics ii
 1064,marketing research
 1064,competitive advantage
 1064,analytics for strategy
@@ -6429,7 +6580,7 @@ degree_id,course
 1077,statistical theory
 1077,large scale data analytics
 1077,data science capstone
-1077,software engineering
+1077,software engineering i
 1077,numerical methods
 1077,information systems
 1077,introduction to the analysis of algorithms
@@ -6448,7 +6599,7 @@ degree_id,course
 1077,sampling and survey techniques
 1077,intermediate statistical methodology
 1092,cloud computing
-1092,machine learning
+1092,machine learning ii
 1092,statistical sampling
 1092,natural language processing
 1092,business analytics
@@ -6458,14 +6609,17 @@ degree_id,course
 1092,doing data science
 1092,applied statistics: inference and modeling
 1092,file organization and database management
+1092,machine learning i
 1092,visualization of information
 1092,quantifying the world
 1089,introduction to data mathematics
 1089,statistics for social science
 1089,introductory statistics with computation
-1089,business statistics
-1089,calculus
-1089,mathematics for decision making
+1089,business statistics i
+1089,calculus i
+1089,mathematics for decision making ii
+1089,calculus ii
+1089,mathematics for decision making iii
 1089,linear algebra
 1089,software development
 1089,data structures
@@ -6477,9 +6631,12 @@ degree_id,course
 1089,discrete structures
 1089,advanced database
 1089,design and analysis of algorithms
-1089,general physics
-1089,general chemistry
-1089,general biology
+1089,general physics i
+1089,general physics ii
+1089,general chemistry i
+1089,general chemistry ii
+1089,general biology i
+1089,general biology ii
 1089,environmental field techniques
 1089,environmental research methods
 1090,introduction to computer science
@@ -6515,21 +6672,25 @@ degree_id,course
 1081,information security
 1081,information technology in the digital era
 1081,machine learning
-1081,object oriented programming
-1081,supply chain solutions with erp/sap
+1081,object oriented programming i
+1081,object oriented programming ii
+1081,supply chain solutions with erp/sap i
+1081,supply chain solutions with erp/sap ii
 1081,data mining for finance
 1096,business analytics
 1096,advanced managerial statistics
 1096,applied regression and forecasting models
 1096,database system design and data warehousing
 1096,"data mining predictive modeling,"
-1096,data mining and predictive modeling
+1096,data mining and predictive modeling i
+1096,data mining and predictive modeling ii
 1096,introduction to programming for analytics
 1096,computer visualization applications
 1096,web data mining
 1096,natural language processing
 1096,database programming
-1096,distributed big data analytics
+1096,distributed big data analytics i
+1096,distributed big data analytics ii
 1096,decisions in marketing management
 1096,data driven marketing
 1096,medical and health informatics
@@ -6553,13 +6714,15 @@ degree_id,course
 1095,advanced managerial statistics
 1095,applied regression and forecasting models
 1095,database system design and data warehousing
-1095,data mining and predictive modeling
+1095,data mining and predictive modeling i
+1095,data mining and predictive modeling ii
 1095,introduction to programming for analytics
 1095,computer visualization applications
 1095,web data mining
 1095,natural language processing
 1095,database programming
-1095,distributed big data analytics
+1095,distributed big data analytics i
+1095,distributed big data analytics ii
 1095,decisions in marketing management
 1095,data driven marketing
 1095,medical and health informatics
@@ -6584,10 +6747,11 @@ degree_id,course
 1120,current trends in health informatics
 1120,health care operations and quality management
 1120,health informatics capstone
-1053,statistical inference
+1053,statistical inference i
 1053,methods:
 1053,sas basics
 1053,statistical software applications
+1053,statistical inference ii
 1053,advanced regression
 1053,analysis of advanced designs and related topics
 1053,r programming language
@@ -6598,8 +6762,10 @@ degree_id,course
 1053,introduction to statistical consulting
 1053,advanced statistical consulting
 1053,practicum in statistical consulting
-1053,statistical analysis
-1053,applied linear models
+1053,statistical analysis i
+1053,statistical analysis ii
+1053,applied linear models i
+1053,applied linear models ii
 1122,database and data warehouses
 1121,business skills development
 1121,decision optimization
@@ -6642,11 +6808,14 @@ degree_id,course
 1078,reinforcement learning
 1078,deep learning
 1078,artificial intelligence
-1078,data science practicum
-1078,data wrangling
+1078,data science practicum i
+1078,data science practicum ii
+1078,data wrangling i
+1078,data wrangling ii
 1078,big data architecture
 1078,sql and nosql
-1078,data engineering practicum
+1078,data engineering practicum i
+1078,data engineering practicum ii
 1055,introduction to data science
 1055,probability and statistics for data science
 1055,machine learning
@@ -6678,7 +6847,8 @@ degree_id,course
 1055,regression & multivariate data analysis
 1125,methods in health data science
 1125,introduction to biomedical informatics
-1125,foundations of biomedical information sciences
+1125,foundations of biomedical information sciences i
+1125,foundations of biomedical information sciences ii
 1125,research design and evaluation in biomedical informatics
 1125,advanced data structures in biomedical informatics
 1125,theories & frameworks for bmi research
@@ -6702,7 +6872,7 @@ degree_id,course
 1070,advanced database systems
 1070,networking
 1070,hacking and network defense
-1070,calculus
+1070,calculus i
 1126,foundations: programming essentials
 1126,database systems
 1126,data mining
@@ -6714,9 +6884,10 @@ degree_id,course
 1110,high-performance computing for scientific applications
 1110,scientific writing
 1110,data science: computational analytics
-1085,calculus
+1085,calculus ii
 1085,linear algebra
-1085,introduction to computer science
+1085,introduction to computer science i
+1085,introduction to computer science ii
 1085,data structures and the analysis of algorithms
 1085,computational methods for data science
 1085,introduction to data science
@@ -6729,6 +6900,7 @@ degree_id,course
 1085,applied statistical methods
 1085,artificial intelligence
 1085,data visualization
+1085,calculus iii
 1085,applied graph theory
 1085,differential equations
 1085,scientific computing
@@ -6799,8 +6971,9 @@ degree_id,course
 1131,introduction to databases
 1131,introduction to sql
 1133,introduction to probability theory for data science
-1133,statistical data mining
+1133,statistical data mining i
 1133,programming and database fundamentals for data scientists
+1133,statistical data mining ii
 1133,introduction to machine learning
 1133,data models query language
 1133,data science project
@@ -6834,19 +7007,21 @@ degree_id,course
 1138,advanced analytics
 1138,business analytics practicum
 1139,modern computing for mathematicians
-1139,topological data analysis
+1139,topological data analysis i
+1139,topological data analysis ii
 1139,optimization methods and nonlinear programming
 1139,machine learning
-1139,introduction to theory of statistics
+1139,introduction to theory of statistics i
 1139,applied statistics
 1139,nonparametric statistics
 1139,practical methods in topological data analysis
 1139,practical methods in machine learning
 1139,computational methods in statistical inference
 1139,linear algebra for applications
-1139,introduction to stochastic processes
+1139,introduction to stochastic processes i
 1144,strategic management capstone
-1144,data science toolkit
+1144,data science toolkit i
+1144,data science toolkit ii
 1144,visual business intelligence
 1144,database management systems
 1144,marketing information and analysis
@@ -6882,7 +7057,9 @@ degree_id,course
 1151,"data integration, modeling, and etl"
 1151,data structures and algorithms
 1151,fundamentals of agile
-1157,calculus
+1157,calculus i
+1157,calculus ii
+1157,calculus iii
 1157,linear algebra
 1157,intro to probability
 1157,mathematical computation
@@ -6951,23 +7128,25 @@ degree_id,course
 1175,leading evolving organizations
 1175,energy informatics
 1175,cyber threat intelligence
-1173,advanced business systems design & development
+1173,advanced business systems design & development i
 1173,financial accounting
 1173,problems & methods in marketing management
 1173,professional writing
 1173,analytics processes for business bootcamp
 1173,statistical analysis for managerial decisions
-1173,business database systems
+1173,business database systems i
 1173,managerial accounting
-1173,marketing analytics
+1173,marketing analytics i
 1173,analytics bootcamp
 1173,intro to python
-1173,corporate finance
+1173,corporate finance i
 1173,organizational staffing
-1173,analytics practicum
+1173,analytics practicum ii
 1173,data mining for business intelligence
 1173,intro to python ism 4
+1173,marketing analytics ii
 1173,professional communications
+1173,analytics practicum iii
 1173,managerial quantitative analysis
 1173,artificial intelligence methods
 1173,web crawling & text analysis
@@ -6978,7 +7157,8 @@ degree_id,course
 1168,business analytics capstone
 1176,intro to computation with python
 1176,data structures and algorithms with python
-1176,data science
+1176,data science i
+1176,data science ii
 1176,"data collection, transformation, and curation"
 1176,senior project in data science
 1176,discrete mathematical structures
@@ -6990,7 +7170,7 @@ degree_id,course
 1176,statistical inference
 1176,applied regression
 1176,introduction to ethics
-1176,moral philosophy
+1176,moral philosophy i
 1178,evolutionary biology for non-life scientists
 1178,computational science for biologists
 1178,multidisciplinary approaches to the study of evolution
@@ -6999,19 +7179,22 @@ degree_id,course
 1178,research and thesis
 1178,graduate seminar
 1178,seminar
-1172,calculus
+1172,calculus i
+1172,calculus ii
 1172,introductory statistics with r
-1172,fund. of programming
+1172,fund. of programming i
 1172,experimental design
 1172,probability
 1172,linear algebra
 1172,statistics
+1172,fund. of programming ii
 1172,linear models
 1172,techniques for large data sets
 1172,senior seminar: mathematical modeling
 1172,machine learning
 1172,statistical modeling
 1172,data analysis in real world
+1172,calculus
 1172,mathematical statistics
 1172,introduction to programming
 1172,critical reading and thinking
@@ -7029,7 +7212,7 @@ degree_id,course
 1172,intro to r for data science
 1172,intro to statistics with r
 1172,programming for the sciences
-1172,fundamentals of programming
+1172,fundamentals of programming i
 1179,medical sciences and human pathophysiology
 1179,medical terminology for health information management
 1179,health data structures and management
@@ -7039,7 +7222,8 @@ degree_id,course
 1179,introduction to health informatics
 1179,information systems for health information management
 1179,management and business practices
-1179,methods in biomedical and health informatics
+1179,methods in biomedical and health informatics i
+1179,methods in biomedical and health informatics ii
 1179,communication skills in health informatics
 1179,methods in qualitative inquiry
 1179,ethics and legal issues in health informatics
@@ -7095,7 +7279,8 @@ degree_id,course
 1179,executive healthcare financial management
 1179,health information management capstone
 1179,health information management seminar
-1182,accounting analysis
+1182,accounting analysis i
+1182,accounting analysis ii
 1182,managerial accounting
 1182,auditing
 1182,federal taxation
@@ -7176,13 +7361,14 @@ degree_id,course
 1194,doctoral seminar
 1194,individual research experience
 1186,"professionalism, ethics and leadership in the statistical sciences"
-1186,sas programming
+1186,sas programming i
 1186,nonparametric methods
 1186,experimental design
 1186,categorical data analysis
 1186,linear regression
 1186,survival analysis
 1186,mathematical statistics
+1186,mathematical statistics ii
 1186,collaborative research experience
 1186,linear models
 1186,bayesian statistics
@@ -7228,7 +7414,8 @@ degree_id,course
 1205,systems for data science
 1205,a computational statistics
 1205,intro to probability and math statistics
-1205,mathematical statistics
+1205,mathematical statistics i
+1205,mathematical statistics ii
 1205,regression modeling
 1205,linear models
 1035,advanced data science
@@ -7290,7 +7477,8 @@ degree_id,course
 1054,machine learning
 1213,machine learning for systems biology & clinical informatics
 1213,biomedical signal and image analysis
-1213,applied biostatistics
+1213,applied biostatistics i
+1213,applied biostatistics ii
 1213,applied statistics i: linear regression
 1213,high throughput molecular genetic and epigenetic data analysis
 1213,applied data analysis
@@ -7300,7 +7488,8 @@ degree_id,course
 1213,scientific methods for health sciences: special topics
 1213,learning from health data: applied data science in health
 1213,numerical linear algebra
-1213,advanced statistical methods
+1213,advanced statistical methods i
+1213,advanced statistical methods ii
 1213,networks: theory and application
 1213,information retrieval
 1213,data mining and statistical learning
@@ -7335,11 +7524,12 @@ degree_id,course
 1213,applied data science for engineers
 1213,network theory
 1213,computational physics
-1213,programming
+1213,programming i
 1213,exploratory data analysis
 1213,applied sampling
 1213,fundamentals of computing and data display
-1213,statistical methods
+1213,statistical methods i
+1213,statistical methods ii
 1213,applications of statistical modeling
 1213,applied business analytics and decisions
 1213,travel behavior analysis and forecasting
@@ -7373,15 +7563,17 @@ degree_id,course
 1097,representations and algorithms for computational molecular biology
 1097,data driven medicine
 1097,translational bioinformatics
-1129,calculus
+1129,calculus i
+1129,calculus ii
 1129,honors calculus i-ii
-1129,honors calculus
+1129,calculus iii
+1129,honors calculus iii
 1129,discrete math
 1129,linear algebra
 1129,abstract linear alg.
 1129,statistics
 1129,chem. fund
-1129,gen. physics
+1129,gen. physics i
 1129,applications in eng.
 1129,intro. computing in eng.
 1129,expos. writing
@@ -7393,7 +7585,8 @@ degree_id,course
 1129,intro machine learning & data mining
 1129,stat. pat. recog.
 1129,algorithms
-1129,sr. capstone proj.
+1129,sr. capstone proj. i
+1129,sr. capstone proj. ii
 1129,infrast. & systems elec.
 1129,data anal. interfaces elec.
 1129,comp & theor. asp. elec.
@@ -7403,7 +7596,8 @@ degree_id,course
 1165,statistical and machine learning
 1165,bayesian statistics
 1165,economic forecasting
-1165,econometrics
+1165,econometrics i
+1165,econometrics ii
 1165,applied statistics for the natural sciences
 1165,quantitative data analysis
 1165,"project, independent study"
@@ -7482,7 +7676,8 @@ degree_id,course
 1068,phylogenomics
 1068,molecular genetics
 1068,genetic statistics
-1068,stat experimenters
+1068,stat experimenters i
+1068,stat experimenters ii
 1068,statistical computing
 1068,data structures and algorithms for bioinformatics
 1068,intro to database systems
@@ -7563,7 +7758,8 @@ degree_id,course
 1214,advanced data management
 1214,interactive media
 1214,multimedia data storage & retrieval
-1214,multimedia design tools
+1214,multimedia design tools i
+1214,multimedia design tools ii
 1214,cloud computing
 1214,information engineering
 1214,enterprise information systems
@@ -7573,9 +7769,10 @@ degree_id,course
 1214,analytics experience capstone
 1214,capstone project
 1206,"business in context: markets, technologies, societies"
-1206,information systems theory
+1206,information systems theory i
 1206,regression
 1206,quantitative research
+1206,information systems theory ii
 1206,decision analysis
 1206,multivariate statistics
 1206,advanced data mining and predictive models
@@ -7585,9 +7782,9 @@ degree_id,course
 1206,dissertation research
 1136,statistical data management
 1136,adv statistical data mgt
-1136,data mining
+1136,data mining i
 1136,advanced data mining
-1136,app stat mod analytics
+1136,app stat mod analytics ii
 1136,science & spreadsheet
 1136,adv app model & analysis
 1136,independent study
@@ -7623,15 +7820,15 @@ degree_id,course
 1115,software/statistical tools
 1115,statistical programming
 1115,statistical computer packages
-1115,statistical packages
+1115,statistical packages ii
 1115,applied statistics for health educators
 1115,applied statistical principles
 1115,information sources in business
-1115,statistical methods
+1115,statistical methods i
 1115,research methods in business
 1115,research and quality improvement in nursing
 1115,analysis of nurse-generated data
-1115,advanced psychological statistics
+1115,advanced psychological statistics i
 1115,statistical methods i for the health care professional
 1115,application area
 1115,interprofessional capstone
@@ -7642,8 +7839,10 @@ degree_id,course
 1115,application of telehealth and remote monitoring
 1115,user interface design in healthcare
 1115,data applications for foundational health promotion
-1115,theory of probability and statistics
+1115,theory of probability and statistics i
+1115,theory of probability and statistics ii
 1115,computer-aided mathematical modeling
+1115,statistical methods ii
 1115,applied statistics and convex optimization
 1115,epidemiology
 1115,community-based health informatics
@@ -7666,10 +7865,11 @@ degree_id,course
 1115,theory of coaching
 1115,sport injury prevention and first aid
 1217,statistics
-1217,theory of statistics
+1217,theory of statistics ii
 1217,applied regression analysis
 1217,time series analysis
 1217,applied multivariate methods
+1217,theory of statistics i
 1217,fundamentals of biostatistical inference
 1217,biostatistics modeling and methods
 1217,introduction to bayesian analysis
@@ -7696,7 +7896,8 @@ degree_id,course
 1217,statistical learning and data mining
 1217,analysis of numerical algorithms
 1217,computational aspects of matrix theory
-1217,artificial intelligence
+1217,artificial intelligence i
+1217,artificial intelligence ii
 1217,visualization
 1217,sparse matrix computations
 1217,introduction to nonlinear optimization
@@ -7709,7 +7910,7 @@ degree_id,course
 1217,information theory and coding
 1217,data compression
 1217,optimization theory
-1217,engineering optimization
+1217,engineering optimization i
 1217,optimization
 1217,discrete optimization
 1217,infrastructure and large scale computing
@@ -7724,7 +7925,8 @@ degree_id,course
 1217,introduction to computer security
 1217,from gps and virtual globes to spatial computing
 1217,big data engineering and architecture
-1217,software engineering
+1217,software engineering i
+1217,software engineering ii
 1217,foundations of distributed computing
 1217,overview of database research
 1217,spatial databases and applications
@@ -7775,7 +7977,7 @@ degree_id,course
 1218,introduction to parallel computing
 1218,principles of database systems
 1218,cloud computing / big data
-1218,foundations of health informatics
+1218,foundations of health informatics i
 1218,foundations of translational bioinformatics
 1218,health informatics teaching
 1218,clinical data mining
@@ -7783,7 +7985,7 @@ degree_id,course
 1218,advanced readings or research in health informatics
 1218,internship in health informatics
 1218,thesis
-1218,health informatics
+1218,health informatics ii
 1218,foundations of biomedical natural language processing
 1218,data visualization for the health sciences
 1218,introduction to theematics of image and data analysis
@@ -7797,7 +7999,7 @@ degree_id,course
 1218,data and information for population health management
 1218,cost-effectiveness analysis in health care
 1218,public health systems analysis and design
-1218,epidemiologic methods
+1218,epidemiologic methods i
 1218,advanced longitudinal data analysis
 1218,advanced survival analysis
 1218,spatial biostatistics
@@ -7865,8 +8067,10 @@ degree_id,course
 1227,abstract and real analysis
 1227,probability theory
 1227,probability and measure
-1227,mathematical statistics
-1227,linear models
+1227,mathematical statistics i
+1227,mathematical statistics ii
+1227,linear models i
+1227,linear models ii
 1227,graduate seminar
 1227,dissertation
 1228,data research methods and tools
@@ -7909,8 +8113,9 @@ degree_id,course
 1233,fundamentals of statistical analysis
 1233,exploration and communication of data
 1233,statistical learning
-1233,optimization methods
+1233,optimization methods i
 1233,modeling unstructured data
+1233,optimization methods ii
 1233,time series analysis
 1233,enterprise level analytics
 1233,hospitality operations & financial metrics
@@ -7934,7 +8139,7 @@ degree_id,course
 1233,data mining and predictive modeling
 1234,math for data scientists
 1234,data exploration
-1234,machine learning & data analysis
+1234,machine learning & data analysis i
 1234,unstructured data/natural lang proc
 1234,leadership and entrepreneurism
 1234,distributed & scalable data engineering
@@ -7942,6 +8147,7 @@ degree_id,course
 1234,internship or capstone
 1234,data science internship
 1234,data science capstone project
+1234,machine learning & data analysis ii
 1234,deep learning
 1234,artificial intelligence
 1234,introduction to applied mathematics for computing
@@ -7963,7 +8169,7 @@ degree_id,course
 1236,database marketing
 1236,social media marketing
 1236,forecasting
-1238,advanced machine learning i and
+1238,advanced machine learning i and ii
 1238,advanced topics in bioinformatics
 1238,molecular biology
 1238,patter recognition
@@ -7992,16 +8198,20 @@ degree_id,course
 1244,principles of supply chain management
 1244,analytics for logistics and distribution management
 1244,"strategic cost, procurement, and supply chain finance"
-1246,intro comp data science
+1246,intro comp data science i
+1246,intro comp data science ii
 1246,fund. of stat for data
 1246,linear methods for data science
-1246,practicum in data science
-1246,machine learning
+1246,practicum in data science i
+1246,machine learning i
+1246,machine learning ii
 1246,generalized linear models
 1246,categorical data analysis
 1246,spatial-temporal analysis
+1246,practicum in data science ii
 1069,biostatistics lab
-1069,computational biology
+1069,computational biology i
+1069,computational biology ii
 1069,reading and research in biostatistics
 1069,survival analysis
 1069,data management and analysis in sas
@@ -8010,23 +8220,36 @@ degree_id,course
 1069,applied longitudinal data analysis
 1069,statistical learning and big data
 1069,statistical methods for next generation sequencing data
-1069,epidemiology
-1074,stochastic processes and probability theory
-1074,mathematical statistics
-1074,advanced mathematical statistics
-1074,theory of linear models
-1074,statistical learning
+1069,epidemiology i
+1069,epidemiology ii
+1074,stochastic processes and probability theory i
+1074,stochastic processes and probability theory ii
+1074,stochastic processes and probability theory iii
+1074,mathematical statistics i
+1074,mathematical statistics ii
+1074,mathematical statistics iii
+1074,advanced mathematical statistics i
+1074,advanced mathematical statistics ii
+1074,advanced mathematical statistics iii
+1074,theory of linear models i
+1074,theory of linear models ii
+1074,theory of linear models iii
+1074,statistical learning i
+1074,statistical learning ii
+1074,statistical learning iii
 1074,environmental data analysis
 1074,machine learning
 1074,time series analysis and forecasts
 1074,applied advanced econometrics
 1074,design of industrial experiments
-1074,analytic methods in public administration
+1074,analytic methods in public administration i
+1074,analytic methods in public administration ii
 1074,structural equation modeling
 1074,research design in applied psychology
 1074,quantitative methods
 1074,applied survey research
-1074,applied probability
+1074,applied probability i
+1074,applied probability ii
 1074,applied multivariate statistical analysis
 1074,bayesian statistics
 1074,computer intensive methods in statistics
@@ -8046,7 +8269,7 @@ degree_id,course
 1127,interactive data visualization
 1127,sql - introduction to database queries
 1127,regression analysis
-1127,r programming intro
+1127,r programming intro i
 1127,intro to python programming for analytics
 1127,financial risk modeling
 1127,spatial statistics with geographic information systems
@@ -8060,7 +8283,7 @@ degree_id,course
 1098,"introduction to programming, data structures and algorithms"
 1098,engineering programming: python
 1098,numerical linear algebra for big data
-1098,time series analysis
+1098,time series analysis i
 1098,spatial and spatio-temporal statistical modeling
 1098,tensor methods in data science
 1098,introduction to networks and graph theory
@@ -8072,9 +8295,11 @@ degree_id,course
 1098,algorithmic complexity
 1098,enterprise and cloud computing
 1098,distributed systems and cloud computing
-1098,database management systems
+1098,database management systems i
+1098,database management systems ii
 1098,data management and exploration on the web
-1098,data acquisition and processing
+1098,data acquisition and processing i
+1098,data acquisition and processing ii
 1098,database security
 1098,fundamentals of cybersecurity
 1098,discrete mathematics for cryptography
@@ -8109,6 +8334,7 @@ degree_id,course
 1248,data engineering and management
 1248,machine learning
 1248,soft computing: computational intelligence
+1248,soft computing: computational intelligence i
 1248,cloud computing
 1250,model based business intelligence
 1250,data mining
@@ -8180,7 +8406,8 @@ degree_id,course
 1265,large-sample theory and methods
 1265,analysis of longitudinal and dependent data
 1266,intro to data science with r
-1266,calculus & analytic geom
+1266,calculus & analytic geom i
+1266,calculus & analytic geom ii
 1266,elementary linear algebra
 1266,probability with applications
 1266,statistics with applications
@@ -8188,7 +8415,8 @@ degree_id,course
 1266,statistical learning
 1266,discrete mathematics
 1266,introduction to formal methods
-1266,intro to computer science
+1266,intro to computer science i
+1266,intro to computer science ii
 1266,data struct & algorithms
 1266,intro to database systems
 1266,senior team project
@@ -8231,13 +8459,16 @@ degree_id,course
 1268,linear regression analysis
 1268,product analytics
 1268,time series analysis
-1268,practicum
+1268,practicum i
 1268,communications for analytics
 1268,intro to machine learning
+1268,practicum ii
 1268,case studies in data science
+1268,practicum iii
 1268,experiments in data science
 1268,advanced machine learning
 1268,special topics in analytics
+1268,practicum
 1268,ethics in data science
 1268,data structures and algorithms
 1268,relational databases
@@ -8245,6 +8476,9 @@ degree_id,course
 1268,distributed computing
 1268,distributed data systems
 1268,machine learning laboratory
+1268,seminar series i
+1268,seminar series ii
+1268,seminar series iii
 1268,seminar series
 1268,seminar series v
 1270,foundations of accounting
@@ -8262,7 +8496,7 @@ degree_id,course
 1270,business and its environment
 1270,managerial marketing
 1270,strategic management
-1270,managerial economics
+1270,managerial economics ii
 1270,thesis
 1148,introduction to data science
 1148,"data exploration, analytics and visualization"
@@ -8278,10 +8512,10 @@ degree_id,course
 1148,data engineering
 1148,r programming
 1148,business intelligence & the data warehouse development process
-1047,fundmentals of computer science
+1047,fundmentals of computer science i
 1047,introduction to technical writing
-1047,calculus
-1047,fundamentals of computer science
+1047,calculus ii
+1047,fundamentals of computer science ii
 1047,introduction to public speaking
 1047,advanced public speaking
 1047,multivariable calculus
@@ -8301,25 +8535,27 @@ degree_id,course
 1047,bayesian statistical inference
 1047,data visualization
 1047,experimental design
-1047,statistical learning & data science
+1047,statistical learning & data science i
 1047,artificial intelligence
 1047,advanced technical writing
 1047,writing in the sciences
 1047,advanced business writing
 1047,statistical computing & exploratory data analysis
+1047,statistical learning & data science ii
 1047,machine learning
 1047,capstone: data science project
 1135,calculus
-1135,computer science
+1135,computer science i
 1135,theoretical statistics
 1135,applied statistics or
 1135,applied regression and anova
 1135,statistical data management
 1135,statistical consulting
 1135,intro to econ analysis
-1135,accounting principles
+1135,accounting principles i
 1135,principles of finance
-1135,actuarial science
+1135,actuarial science i
+1135,actuarial science ii
 1135,time series analysis
 1135,risk mgmt - property & casualty
 1135,risk mgmt - life insurance
@@ -8339,10 +8575,11 @@ degree_id,course
 1237,statistical inference
 1263,discrete mathematics
 1263,intro to computer science
-1263,calculus
+1263,calculus i
 1263,introduction to artificial intelligence
 1263,data mining
 1263,linear algebra with differential equations
+1263,calculus iii
 1263,computational introduction to statistics
 1263,elements of probability and mathematical statistics
 1263,intermediate statistical and computational methods
@@ -8358,7 +8595,8 @@ degree_id,course
 1263,physics
 1263,economics and business
 1263,political science
-1263,principles of biology
+1263,principles of biology i
+1263,principles of biology ii
 1263,genetics and the human genome
 1263,principles of genetics
 1263,evolution
@@ -8396,7 +8634,7 @@ degree_id,course
 1263,introduction to probability
 1263,stochastic processes
 1263,introduction to mathematical statistics
-1263,operations research
+1263,operations research i
 1263,introduction to mathematical models in life science
 1263,number theory with applications
 1263,introduction to cryptography
@@ -8423,7 +8661,7 @@ degree_id,course
 1263,applied boundary value problems
 1263,quantum mechanics of physical systems
 1263,thermodynamics and statistical mechanics
-1263,classical mechanics
+1263,classical mechanics i
 1263,intermediate microeconomics
 1263,intermediate macroeconomics
 1263,econometrics
@@ -8435,7 +8673,7 @@ degree_id,course
 1263,principles of marketing
 1263,introduction to positive theory
 1263,applied data analysis
-1263,data analysis
+1263,data analysis ii
 1263,discrimination
 1263,mechanisms of international relations
 1263,foundations of modern international politics
@@ -8533,7 +8771,7 @@ degree_id,course
 1274,applied probability
 1274,high-dimensional statistics and big data problems
 1274,special topics class
-1222,biostatistics i &
+1222,biostatistics i & ii
 1222,clinical research methodology
 1222,responsible conduct of research
 1222,introduction to medical informatics
@@ -8579,23 +8817,26 @@ degree_id,course
 1278,business intelligence & analytics
 1278,data mining
 1283,introduction to programming with python
-1283,programming
+1283,programming ii
 1283,algorithms and data structures
 1283,data analysis and visualization
 1283,distributed systems
 1283,professional experience
-1283,analysis
-1283,introduction to mathematical thinking
+1283,analysis i
+1283,analysis ii
+1283,introduction to mathematical thinking i
+1283,introduction to mathematical thinking ii
 1283,statistical modeling
 1283,linear algebra
 1283,intermediate statistics
-1283,calculus
+1283,calculus iii
 1283,statistical inference
 1283,python
 1283,c++
 1283,c#
 1283,software processes
-1283,computational problem solving
+1283,computational problem solving i
+1283,computational problem solving ii
 1255,big data analytics
 1269,data resource management
 1269,advanced quantitative methods in business
@@ -8672,7 +8913,7 @@ degree_id,course
 1291,fundamentals of mathematics
 1291,applied probability
 1291,probability theory
-1291,computer programming
+1291,computer programming i
 1291,intermediate programming
 1291,data struc & algorithms
 1291,database systems
@@ -8680,13 +8921,15 @@ degree_id,course
 1291,intro to data science
 1291,basic statistical methods
 1291,statistics for engineering
-1291,statistical methods
+1291,statistical methods i
+1291,statistical methods ii
 1291,survivl/logistic regression
 1291,undergrad honors thesis
 1291,undergraduate honors thesis
-1291,data science
+1291,data science i
 1291,statistical learning
-1291,calculus
+1291,calculus i
+1291,calculus ii
 1291,applied linear algebra
 1291,linear algebra
 1291,advanced programming
@@ -8698,6 +8941,7 @@ degree_id,course
 1291,machine learning
 1291,modeling complex systems 3
 1291,evolutionary computation 3
+1291,calculus iii
 1291,basic combinatorial theory
 1291,mathematical models & anlysis
 1291,intro to numerical analysis
@@ -8710,6 +8954,7 @@ degree_id,course
 1291,categorical data analysis
 1291,statistical inference
 1291,bayesian statistics
+1291,data science ii
 1291,intro to geog info systems
 1291,appld artificial neural ntwrks
 1291,applied geostatistics
@@ -8718,7 +8963,7 @@ degree_id,course
 1291,fundamentals of physics
 1293,principles of complex systems
 1293,modeling complex systems
-1293,data science
+1293,data science i
 1293,"chaos, fractals, and dynamical systems"
 1293,complex networks
 1293,evolutionary computation
@@ -8726,6 +8971,7 @@ degree_id,course
 1293,appl time series & forecasting
 1293,applied geostatistics
 1293,applied artificial neural networks
+1293,data science ii
 1293,mathematical biology & ecology
 1293,adv. ordinary differential equations
 1293,reliability of engineering systems
@@ -8755,16 +9001,18 @@ degree_id,course
 1295,foundations of computer science
 1295,data mining
 1295,bayesian machine learning |
-1295,practice and application of data science
+1295,practice and application of data science i
 1295,ethics of big data
-1295,data science capstone project work
+1295,data science capstone project work i
 1295,machine learning
+1295,practice and application of data science ii
+1295,data science capstone project work ii
 1295,theory of computation
 1295,parallel computing
 1295,database systems
 1295,biomedical cloud computing seminar
 1295,time series econometrics
-1295,econometrics
+1295,econometrics ii
 1295,advanced use of geographical information systems
 1295,advanced quantitative analysis
 1295,recent advances in public health genomics
@@ -8814,18 +9062,23 @@ degree_id,course
 1304,ethics of data science
 1304,prescriptive analytics
 1304,data science and strategic decision-making
-1307,r for statistics
-1307,calculus and analytical geometry
+1307,r for statistics i
+1307,r for statistics ii
+1307,calculus and analytical geometry i
+1307,calculus and analytical geometry ii
 1307,calculus-function of several variables
 1307,the theory of single variable calculus
 1307,elementary matrix and linear algebra
-1307,introduction to probability and mathematical statistics
-1307,statistical methods
+1307,introduction to probability and mathematical statistics i
+1307,introduction to probability and mathematical statistics ii
+1307,statistical methods i
+1307,statistical methods ii
 1307,introduction to statistical inference
 1307,statistical learning
 1307,data science computing project
 1307,professional skills in data science
 1307,data science practicum
+1307,r for statistics iii
 1307,introduction to time series
 1307,introductory nonparametric statistics
 1307,an introduction to sample survey theory and methods
@@ -8838,18 +9091,19 @@ degree_id,course
 1307,introduction to computational statistics
 1307,special topics in statistics
 1307,statistical methods for spatial data
-1307,mathematical statistics
+1307,mathematical statistics i
 1307,statistical methods for clinical trials
 1307,statistical methods for epidemiology
-1307,"applied time series analysis, forecasting and control"
+1307,"applied time series analysis, forecasting and control i"
+1307,mathematical statistics
 1307,large sample theory of statistical inference
 1307,survival analysis theory and methods
-1307,multivariate analysis
+1307,multivariate analysis i
 1307,decision trees for multivariate analysis
 1307,statistical methods for medical image analysis
 1307,statistical computing
-1307,introduction to bayesian decision and control
-1307,experimental design
+1307,introduction to bayesian decision and control i
+1307,experimental design i
 1307,non parametric statistics
 1307,sample survey theory and method
 1307,empirical processes and semiparametric inference
@@ -8870,7 +9124,7 @@ degree_id,course
 1310,time series analysis
 1310,stochastic processes
 1310,probability
-1310,calculus
+1310,calculus i
 1310,discrete mathematics
 1310,linear systems and matrices
 1310,linear algebra
@@ -8883,7 +9137,8 @@ degree_id,course
 1310,artificial intelligence
 1310,introduction to data science
 1310,data mining and applications
-1310,data science colloquium
+1310,data science colloquium i
+1310,data science colloquium ii
 1310,data science capstone
 1310,computational linear algebra
 1310,scientific visualization
@@ -8897,13 +9152,15 @@ degree_id,course
 1313,survey of data science applications
 1313,data science rights & responsibility
 1313,case-studies in data science
-1313,data science in teams
+1313,data science in teams i
+1313,data science in teams ii
 1313,data management systems
 1313,data science algorithms
 1313,big data scaling
 1313,exploratory data analysis
 1313,probability & statistical inference
-1313,modeling & machine learning
+1313,modeling & machine learning i
+1313,modeling & machine learning ii
 1313,capstone development
 1316,introduction to business analytics
 1316,customer relationship management – .5
@@ -8981,7 +9238,7 @@ degree_id,course
 1322,financial technology analytics
 1322,intro to financial accounting
 1322,financial management
-1322,advanced corporate finance
+1322,advanced corporate finance i
 1322,investment theory
 1322,options and futures
 1322,fixed income securities
@@ -8989,7 +9246,7 @@ degree_id,course
 1322,seminar in financial technology
 1322,experiential project
 1322,accounting analytics
-1322,financial accounting
+1322,financial accounting ii
 1322,ethical decision making in accounting
 1322,strategic cost analysis
 1322,business analysis using financial statements
@@ -9010,7 +9267,7 @@ degree_id,course
 1338,analytics software technology
 1338,career management
 1338,business metrics machine learning
-1338,data analysis & business modeling bus analytics practicum
+1338,data analysis & business modeling bus analytics practicum i
 1338,mess to model
 1338,visual analytics and influencing
 1338,data management
@@ -9019,8 +9276,8 @@ degree_id,course
 1338,process analytics prescriptive analytics
 1338,forecasting financial & risk analysis
 1338,marketing analytics supply chain analytics
-1338,bus analytics practicum
-1338,model to insight business analytics practicum
+1338,bus analytics practicum ii
+1338,model to insight business analytics practicum iii
 1338,insight to impact
 1338,project management
 1338,problem framing
@@ -9039,7 +9296,7 @@ degree_id,course
 1338,genetcs & bioinformatics
 1338,statistical computing
 1338,indstdy:info. theory and clt
-1338,optimization
+1338,optimization i
 1338,probability theory
 1338,introductory data analysis emerson
 1338,theory of statistics
@@ -9082,24 +9339,26 @@ degree_id,course
 573,mathematical foundations of data storage systems
 573,web information systems
 548,modern computing for mathematicians
-548,topological data analysis
+548,topological data analysis i
+548,topological data analysis ii
 548,optimization methods and nonlinear programming
 548,machine learning
-548,introduction to theory of statistics
+548,introduction to theory of statistics i
 548,applied statistics
 548,nonparametric statistics
 548,practical methods in topological data analysis
 548,practical methods in machine learning
 548,computational methods in statistical inference
 548,advanced linear algebra
-548,introduction to stochastic processes
+548,introduction to stochastic processes i
 580,computational statistics
 580,regression analysis
 580,experimental design
 580,biostatistics seminar
 580,environmental health seminar
 580,ethics in research
-580,mathematical statistics
+580,mathematical statistics i
+580,mathematical statistics ii
 580,dissertation research
 580,introduction to epidemiology
 580,cancer biology & therapeutics
@@ -9118,7 +9377,8 @@ degree_id,course
 590,business analytics capstone
 590,introduction to database
 590,big data programming
-1052,business research methods
+1052,business research methods i
+1052,business research methods ii
 1052,data mining and analysis
 1052,data mining
 1052,data management system design
@@ -9135,11 +9395,12 @@ degree_id,course
 1052,advanced data security and privacy
 1052,simulation for finance
 1052,linear systems
-1052,random signal analysis
+1052,random signal analysis i
 1052,managerial economics
 1052,management aspects of information systems
-1052,corporate finance
+1052,corporate finance i
 1052,global macro economics
+1052,corporate finance ii
 1052,financial investment institutions
 1052,international finance
 1052,"mergers, acquisitions, and restructuring"
