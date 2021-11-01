@@ -88,7 +88,7 @@ nrow(courses_df)
 Let's take a random sample of course text to pick our next cleaning step.
 
 ```{r}
-slice_sample(courses_df, n = 60) %>% select(course)
+peak(courses_df)
 ```
 
 I want to remove any parentheses or brackets and whatever is in them.
@@ -104,7 +104,7 @@ courses_df <-
 Take a sample to see how that worked.
 
 ```{r}
-slice_sample(courses_df, n = 60) %>% select(course)
+peak(courses_df)
 ```
 
 Let's take a look at the very shortest course names.
@@ -131,7 +131,7 @@ down to 14,435.
 Sampling to review:
 
 ```{r}
-slice_sample(courses_df, n = 60) %>% select(course)
+peak(courses_df)
 ```
 
 I want to get rid of the course code and department abbreviation at the 
@@ -160,7 +160,7 @@ courses_df <-
 And sample the course after this cleaning:
 
 ```{r}
-courses_df %>% slice_sample(n = 50) %>% select(course)
+peak(courses_df)
 ```
 
 Going to try again because there are still course codes etc. left starting 
@@ -188,7 +188,7 @@ courses_df <-
 And sample the results:
 
 ```{r}
-slice_sample(courses_df, n = 60) %>% select(course)
+peak(courses_df)
 ```
 
 Looking good! 
@@ -211,7 +211,7 @@ courses_df <-
 Sampling the results:
 
 ```{r}
-courses_df %>% slice_sample(n = 50) %>% select(course)
+peak(courses_df)
 ```
 Looking pretty good!
 
@@ -242,7 +242,7 @@ to 13,611 courses.
 Sampling the results:
 
 ```{r}
-slice_sample(courses_df, n = 100) %>% select(course)
+peak(courses_df)
 ```
 
 Let's try removing some stop words.
@@ -318,7 +318,7 @@ headers and stuff from course sections of websites. We're down to 12,184.
 How's it look?
 
 ```{r}
-slice_sample(courses_df, n = 100) %>% select(course)
+peak(courses_df)
 ```
 
 Now let's remove those other words but not delete the whole course text.
@@ -358,7 +358,7 @@ OK, 194 short courses removed. Down to 11,990 courses.
 Let's take a random slice and see how it's looking:
 
 ```{r}
-slice_sample(courses_df, n = 100) %>% select(course)
+peak(courses_df)
 ```
 
 Pretty clean! One of the last things to do is get rid of numbers.
@@ -383,7 +383,7 @@ courses_df <-
 ```
 
 ```{r}
-slice_sample(courses_df, n = 100) %>% select(course)
+peak(courses_df)
 ```
 
 OK so I think I went as far as I could go in R. 
@@ -410,7 +410,7 @@ Loading up the manually cleaned spreadsheet:
 ```{r}
 courses_df2 <-
   readr::read_csv(file = file.path('intermediate', 'courses_post_manual_clean.csv')) %>%
-  select(degree_id, course) %>%
+  select(-done) %>%
   filter(!is.na(course))
 ```
 
@@ -436,7 +436,7 @@ courses_df2 <- mutate(courses_df2, course = str_trim(course, side = 'both'))
 ```
 
 ```{r}
-slice_sample(courses_df2, n = 100) %>% select(course)
+peak(courses_df2)
 ```
 
 Still have a few issues:
@@ -445,6 +445,8 @@ Still have a few issues:
 - have a lot of "I" and "II" ("Physics I or II")
 - there are course duplicates per degree
 
+After discussion with Michael, we're going to leave the roman numerals in.
+
 Lowering all course text:
 
 ```{r}
@@ -452,24 +454,13 @@ courses_df2 <-mutate(courses_df2, course = str_to_lower(course))
 ```
 
 ```{r}
-slice_sample(courses_df2, n = 100) %>% select(course)
-```
-
-Let's try to get rid of some of the roman numerals.
-
-```{r}
-courses_df2 <- courses_df2 %>%
-  mutate(course = str_remove(course, pattern = regex(' i+$')))
-```
-
-```{r}
-slice_sample(courses_df2, n = 100) %>% select(course)
+peak(courses_df2)
 ```
 
 OK, now to remove duplicate courses per degree:
 
 ```{r}
-courses_df2 <- distinct(courses_df2, degree_id, course)
+courses_df2 <- distinct(courses_df2, degree_id, course, .keep_all = TRUE)
 ```
 
 This leaves us with:
@@ -478,7 +469,7 @@ This leaves us with:
 nrow(courses_df2)
 ```
 
-9,184 courses! That's pretty manageable. 
+9,445 courses! That's pretty manageable. 
 
 Let's save it and call it a day.
 
