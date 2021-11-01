@@ -49,10 +49,11 @@ courses_df <-
   quotes_df %>%
   left_join(codes_df) %>%
   filter(code == 'Courses') %>%
+  arrange(degree_id) %>%
   mutate(course = str_split(quote, '\n')) %>%
   tidyr::unnest_longer(course) %>%
-  select(degree_id, quote_id, course)
-  
+  mutate(course_id = group_indices(., course)) %>%
+  select(degree_id, course_id, course)
   
 
 
